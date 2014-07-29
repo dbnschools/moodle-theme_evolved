@@ -96,6 +96,22 @@ defined('MOODLE_INTERNAL') || die;
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
+	// General Alert setting
+	$name = 'theme_evolved/generalalert';
+	$title = get_string('generalalert','theme_evolved');
+	$description = get_string('generalalertdesc', 'theme_evolved');
+	$default = '';
+	$setting = new admin_setting_configtext($name, $title, $description, $default);
+	$temp->add($setting);
+
+	// Snow Alert setting
+	$name = 'theme_evolved/snowalert';
+	$title = get_string('snowalert','theme_evolved');
+	$description = get_string('snowalertdesc', 'theme_evolved');
+	$default = '';
+	$setting = new admin_setting_configtext($name, $title, $description, $default);
+	$temp->add($setting);
+
     // Footnote setting.
     $name = 'theme_evolved/footnote';
     $title = get_string('footnote', 'theme_evolved');

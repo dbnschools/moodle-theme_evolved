@@ -81,6 +81,13 @@ $string['textcolor_desc'] = 'The colour of the text.';
 $string['contentbackground'] = 'Main content background colour';
 $string['contentbackground_desc'] = 'The background colour of the main content of the site, leave empty for none.';
 
+$string['generalalert'] = 'General Alert';
+$string['generalalertdesc'] = 'This will display an alert on your frontpage to advise users of a particular event/situation.';
+
+$string['snowalert'] = 'Snow Alert';
+$string['snowalertdesc'] = 'This will display an alert on your frontpage to advise users of closures or information regarding inclement weather.';
+
+
 // My Courses CustomMenu dropdown
 $string['custommenuheadingsub'] = 'Add additional functionality to your custommenu.';
 $string['custommenudesc'] = 'Settings here allow you to add new dynamic functionality to the custommenu (also refered to as Dropdown menu)';
