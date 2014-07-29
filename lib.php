@@ -232,6 +232,24 @@ function theme_evolved_process_css($css, $theme) {
 
     return $css;
 }
+/**
+ * Adds the logo to CSS.
+ *
+ * @param string $css The CSS.
+ * @param string $logo The URL of the logo.
+ * @return string The parsed CSS
+ */
+function theme_evolved_set_logo($css, $logo) {
+    $tag = '[[setting:logo]]';
+    $replacement = $logo;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
 
 function theme_evolved_set_headingfont($css, $headingfont) {
     $tag = '[[setting:headingfont]]';
@@ -275,24 +293,7 @@ function theme_evolved_set_bodyweight($css, $bodyweight) {
 
 
 
-/**
- * Adds the logo to CSS.
- *
- * @param string $css The CSS.
- * @param string $logo The URL of the logo.
- * @return string The parsed CSS
- */
-function theme_evolved_set_logo($css, $logo) {
-    $tag = '[[setting:logo]]';
-    $replacement = $logo;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
 
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
 
 /**
  * Serves any files associated with the theme settings.
