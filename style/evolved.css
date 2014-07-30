@@ -22,6 +22,9 @@ a.logo {
     float: right;
 }
 
+.pagelayout-report .no-overflow {
+overflow: auto;
+}
 
 /* Alerts (aardvark) */
 #page-header-generalalert {
@@ -91,10 +94,7 @@ a.logo {
 }
 
 
-
-/*Google Fonts 
-Special thanks to Julian Ridden (Theme Essential)
--------------------------*/
+/*Google Fonts (Theme Essential)*/
 
 /* @group Headings */
 h1, h2, h3, h4, h5, h6,

@@ -335,8 +335,9 @@ function theme_evolved_set_customcss($css, $customcss) {
     return $css;
 }
 
+//Load Jquery
 function theme_evolved_page_init(moodle_page $page) {
-    $page->requires->jquery();
+$page->requires->jquery();
 $page->requires->jquery_plugin('tab', 'theme_evolved');
 $page->requires->jquery_plugin('modal', 'theme_evolved');
 $page->requires->jquery_plugin('tooltip', 'theme_evolved');

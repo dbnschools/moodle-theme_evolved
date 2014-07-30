@@ -37,9 +37,10 @@ defined('MOODLE_INTERNAL') || die;
 
 	$ADMIN->add('themes', new admin_category('theme_evolved', 'evolve-D'));
 
-	// "geneictemp" settingpage
+    // "geneictemp" settingpage
     $temp = new admin_settingpage('theme_evolved_generic',  get_string('geneicsettings', 'theme_evolved'));
-	// Font Selector.
+    
+    // Font Selector.
     $name = 'theme_evolved/fontselect';
     $title = get_string('fontselect' , 'theme_evolved');
     $description = get_string('fontselectdesc', 'theme_evolved');
@@ -96,21 +97,21 @@ defined('MOODLE_INTERNAL') || die;
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
-	// General Alert setting
-	$name = 'theme_evolved/generalalert';
-	$title = get_string('generalalert','theme_evolved');
-	$description = get_string('generalalertdesc', 'theme_evolved');
-	$default = '';
-	$setting = new admin_setting_configtext($name, $title, $description, $default);
-	$temp->add($setting);
+    // General Alert setting
+    $name = 'theme_evolved/generalalert';
+    $title = get_string('generalalert','theme_evolved');
+    $description = get_string('generalalertdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
 
-	// Snow Alert setting
-	$name = 'theme_evolved/snowalert';
-	$title = get_string('snowalert','theme_evolved');
-	$description = get_string('snowalertdesc', 'theme_evolved');
-	$default = '';
-	$setting = new admin_setting_configtext($name, $title, $description, $default);
-	$temp->add($setting);
+    // Snow Alert setting
+    $name = 'theme_evolved/snowalert';
+    $title = get_string('snowalert','theme_evolved');
+    $description = get_string('snowalertdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
 
     // Footnote setting.
     $name = 'theme_evolved/footnote';

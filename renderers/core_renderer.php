@@ -60,7 +60,7 @@
  			}
             
         }
-        
+
         /*
     	* This code replaces adds the My Dashboard
     	* functionality to the custommenu.
@@ -84,3 +84,4 @@
         return parent::render_custom_menu($menu);
 	}
 }
+?>
