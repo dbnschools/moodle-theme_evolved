@@ -92,7 +92,7 @@ defined('MOODLE_INTERNAL') || die;
     $name = 'theme_evolved/customcss';
     $title = get_string('customcss', 'theme_evolved');
     $description = get_string('customcssdesc', 'theme_evolved');
-    $default = '';
+    $default = null;
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
@@ -257,6 +257,242 @@ defined('MOODLE_INTERNAL') || die;
     $description = get_string('displaymydashboarddesc', 'theme_evolved');
     $default = true;
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+$ADMIN->add('theme_evolved', $temp);
+
+    /* Marketing Spot Settings temp*/
+    $temp = new admin_settingpage('theme_evolved_marketing', get_string('marketingheading', 'theme_evolved'));
+
+    // @Marketing Box background color setting.
+    $name = 'theme_evolved/marketboxcolor';
+    $title = get_string('marketboxcolor', 'theme_evolved');
+    $description = get_string('marketboxcolor_desc', 'theme_evolved');
+    $default = '#3d3d3d';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Toggle Marketing Spots.
+    $name = 'theme_evolved/togglemarketing';
+    $title = get_string('togglemarketing' , 'theme_evolved');
+    $description = get_string('togglemarketingdesc', 'theme_evolved');
+    $alwaysdisplay = get_string('alwaysdisplay', 'theme_evolved');
+    $displaybeforelogin = get_string('displaybeforelogin', 'theme_evolved');
+    $displayafterlogin = get_string('displayafterlogin', 'theme_evolved');
+    $dontdisplay = get_string('dontdisplay', 'theme_evolved');
+    $default = 'display';
+    $choices = array('1'=>$alwaysdisplay, '2'=>$displaybeforelogin, '3'=>$displayafterlogin, '0'=>$dontdisplay);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    // This is the descriptor for Marketing Spot One
+    $name = 'theme_evolved/marketing1info';
+    $heading = get_string('marketing1', 'theme_evolved');
+    $information = get_string('marketinginfodesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+    
+    // Marketing Spot One
+    $name = 'theme_evolved/marketing1';
+    $title = get_string('marketingtitle', 'theme_evolved');
+    $description = get_string('marketingtitledesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing1icon';
+    $title = get_string('marketingicon', 'theme_evolved');
+    $description = get_string('marketingicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing1content';
+    $title = get_string('marketingcontent', 'theme_evolved');
+    $description = get_string('marketingcontentdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing1buttontext';
+    $title = get_string('marketingbuttontext', 'theme_evolved');
+    $description = get_string('marketingbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing1buttonurl';
+    $title = get_string('marketingbuttonurl', 'theme_evolved');
+    $description = get_string('marketingbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing1target';
+    $title = get_string('marketingurltarget' , 'theme_evolved');
+    $description = get_string('marketingurltargetdesc', 'theme_evolved');
+    $target1 = get_string('marketingurltargetself', 'theme_evolved');
+    $target2 = get_string('marketingurltargetnew', 'theme_evolved');
+    $target3 = get_string('marketingurltargetparent', 'theme_evolved');
+    $default = 'target1';
+    $choices = array('_self'=>$target1, '_blank'=>$target2, '_parent'=>$target3);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    // This is the descriptor for Marketing Spot Two
+    $name = 'theme_evolved/marketing2info';
+    $heading = get_string('marketing2', 'theme_evolved');
+    $information = get_string('marketinginfodesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+    
+    // Marketing Spot Two.
+    $name = 'theme_evolved/marketing2';
+    $title = get_string('marketingtitle', 'theme_evolved');
+    $description = get_string('marketingtitledesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing2icon';
+    $title = get_string('marketingicon', 'theme_evolved');
+    $description = get_string('marketingicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing2content';
+    $title = get_string('marketingcontent', 'theme_evolved');
+    $description = get_string('marketingcontentdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing2buttontext';
+    $title = get_string('marketingbuttontext', 'theme_evolved');
+    $description = get_string('marketingbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing2buttonurl';
+    $title = get_string('marketingbuttonurl', 'theme_evolved');
+    $description = get_string('marketingbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing2target';
+    $title = get_string('marketingurltarget' , 'theme_evolved');
+    $description = get_string('marketingurltargetdesc', 'theme_evolved');
+    $target1 = get_string('marketingurltargetself', 'theme_evolved');
+    $target2 = get_string('marketingurltargetnew', 'theme_evolved');
+    $target3 = get_string('marketingurltargetparent', 'theme_evolved');
+    $default = 'target1';
+    $choices = array('_self'=>$target1, '_blank'=>$target2, '_parent'=>$target3);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    // This is the descriptor for Marketing Spot Three
+    $name = 'theme_evolved/marketing3info';
+    $heading = get_string('marketing3', 'theme_evolved');
+    $information = get_string('marketinginfodesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+    
+    // Marketing Spot Three.
+    $name = 'theme_evolved/marketing3';
+    $title = get_string('marketingtitle', 'theme_evolved');
+    $description = get_string('marketingtitledesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing3icon';
+    $title = get_string('marketingicon', 'theme_evolved');
+    $description = get_string('marketingicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing3content';
+    $title = get_string('marketingcontent', 'theme_evolved');
+    $description = get_string('marketingcontentdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing3buttontext';
+    $title = get_string('marketingbuttontext', 'theme_evolved');
+    $description = get_string('marketingbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing3buttonurl';
+    $title = get_string('marketingbuttonurl', 'theme_evolved');
+    $description = get_string('marketingbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/marketing3target';
+    $title = get_string('marketingurltarget' , 'theme_evolved');
+    $description = get_string('marketingurltargetdesc', 'theme_evolved');
+    $target1 = get_string('marketingurltargetself', 'theme_evolved');
+    $target2 = get_string('marketingurltargetnew', 'theme_evolved');
+    $target3 = get_string('marketingurltargetparent', 'theme_evolved');
+    $default = 'target1';
+    $choices = array('_self'=>$target1, '_blank'=>$target2, '_parent'=>$target3);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $ADMIN->add('theme_evolved', $temp);
+
+
+
+/* Frontpage Settings temp*/
+    $temp = new admin_settingpage('theme_evolved_frontpage', get_string('frontpageheading', 'theme_evolved'));
+
+
+// Toggle custom frontpage on or off.
+    $name = 'theme_evolved/togglefp';
+    $title = get_string('togglefp' , 'theme_evolved');
+    $description = get_string('togglefpdesc', 'theme_evolved');
+    $fpon = get_string('fpon', 'theme_evolved');
+    $fpoff = get_string('fpoff', 'theme_evolved');
+    $default = '2';
+    $choices = array('1'=>$fpon, '2'=>$fpoff);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+// Frontpage fullscreen image  file setting.
+    $name = 'theme_evolved/fpbkg';
+    $title = get_string('fpbkg','theme_evolved');
+    $description = get_string('fpbkgdesc', 'theme_evolved');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'fpbkg');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 

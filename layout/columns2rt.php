@@ -27,7 +27,7 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!-- Google web fonts -->
     <?php require_once(dirname(__FILE__).'/includes/fonts.php'); ?>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type='text/css' />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' />
 </head>
 
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
@@ -57,12 +57,12 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
 <?php require_once(dirname(__FILE__).'/includes/alerts.php'); ?>
 
-  <header id="page-header" class="clearfix">
-	<?php echo $html->heading; ?>
+    <header id="page-header" class="clearfix">
         <div id="page-navbar" class="clearfix">
-            <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
+            <div class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></div>
+            <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
         </div>
+        <?php echo $html->heading; ?>
         <div id="course-header">
             <?php echo $OUTPUT->course_header(); ?>
         </div>
@@ -70,7 +70,7 @@ echo $OUTPUT->doctype() ?>
 
     <div id="page-content" class="row-fluid">
 
-    <?php
+        <?php
 if (!$left) { ?>
     <section id="region-main" class="span9 pull-left">
 <?php } else { ?>
@@ -88,6 +88,17 @@ if (!$left) { ?>
     </div>
 
     <footer id="page-footer">
+<!-- Start Marketing Spots -->
+    <?php 
+        if($PAGE->theme->settings->togglemarketing==1) {
+            require_once(dirname(__FILE__).'/includes/marketingspots.php');
+        } else if($PAGE->theme->settings->togglemarketing==2 && !isloggedin()) {
+            require_once(dirname(__FILE__).'/includes/marketingspots.php');
+        } else if($PAGE->theme->settings->togglemarketing==3 && isloggedin()) {
+            require_once(dirname(__FILE__).'/includes/marketingspots.php');
+        } 
+    ?>
+    <!-- End Marketing Spots -->
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
         <?php

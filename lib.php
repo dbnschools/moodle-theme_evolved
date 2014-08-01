@@ -103,8 +103,20 @@ function theme_evolved_process_css($css, $theme) {
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
     $css = theme_evolved_set_logo($css, $logo);
+    
+    // Set the background image for the frontpage.
+    $fpbkg = $theme->setting_file_url('fpbkg', 'fpbkg');
+    $css = theme_evolved_set_fpbkg($css, $fpbkg);
+    
+    // Set custom CSS.
+    if (!empty($theme->settings->customcss)) {
+        $customcss = $theme->settings->customcss;
+    } else {
+        $customcss = null;
+    }
+    $css = theme_evolved_set_customcss($css, $customcss);
 
-// Set the Fonts.
+    // Set the Fonts.
     if ($theme->settings->fontselect ==1) {
         $headingfont = 'Oswald';
         $bodyfont = 'PT Sans';
@@ -222,13 +234,33 @@ function theme_evolved_process_css($css, $theme) {
     $css = theme_evolved_set_bodysize($css, $bodysize);
     $css = theme_evolved_set_bodyweight($css, $bodyweight);
 
-    // Set custom CSS.
-    if (!empty($theme->settings->customcss)) {
-        $customcss = $theme->settings->customcss;
+    // Set marketbox CSS.
+    if (!empty($theme->settings->marketboxcolor)) {
+        $marketboxcolor = $theme->settings->marketboxcolor;
     } else {
-        $customcss = null;
+        $marketboxcolor = '';
     }
-    $css = theme_evolved_set_customcss($css, $customcss);
+    $css = theme_evolved_set_marketboxcolor($css, $marketboxcolor);
+
+    return $css;
+}
+
+
+/**
+ * Adds any custom CSS to the CSS before it is cached.
+ *
+ * @param string $css The original CSS.
+ * @param string $customcss The custom CSS to add.
+ * @return string The CSS which now contains our custom CSS.
+ */
+function theme_evolved_set_customcss($css, $customcss) {
+    $tag = '[[setting:customcss]]';
+    $replacement = $customcss;
+    if (is_null($replacement)) {
+        $replacement = null;
+    }
+
+    $css = str_replace($tag, $replacement, $css);
 
     return $css;
 }
@@ -291,9 +323,20 @@ function theme_evolved_set_bodyweight($css, $bodyweight) {
     return $css;
 }
 
+/**
+ * Adds the frontpage background to CSS.
+ */
+function theme_evolved_set_fpbkg($css, $fpbkg) {
+    $tag = '[[setting:fpbkg]]';
+    $replacement = $fpbkg;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
 
+    $css = str_replace($tag, $replacement, $css);
 
-
+    return $css;
+}
 
 /**
  * Serves any files associated with the theme settings.
@@ -308,7 +351,7 @@ function theme_evolved_set_bodyweight($css, $bodyweight) {
  * @return bool
  */
 function theme_evolved_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage')) {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' || $filearea === 'fpbkg')) {
         $theme = theme_config::load('evolved');
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else {
@@ -316,17 +359,11 @@ function theme_evolved_pluginfile($course, $cm, $context, $filearea, $args, $for
     }
 }
 
-/**
- * Adds any custom CSS to the CSS before it is cached.
- *
- * @param string $css The original CSS.
- * @param string $customcss The custom CSS to add.
- * @return string The CSS which now contains our custom CSS.
- */
-function theme_evolved_set_customcss($css, $customcss) {
-    $tag = '[[setting:customcss]]';
-    $replacement = $customcss;
-    if (is_null($replacement)) {
+//Adds custom background color to marketboxes
+function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
+    $tag = '[[setting:marketboxcolor]]';
+    $replacement = $marketboxcolor;
+        if (is_null($replacement)) {
         $replacement = '';
     }
 

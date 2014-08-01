@@ -31,10 +31,19 @@ $string['pluginname'] = 'evolve-D';
 $string['geneicsettings'] = 'General Settings';
 $string['themecolorsettings'] = 'Theme Colors';
 $string['custommenuheading'] = 'Custom Menu';
+$string['marketingheading'] = 'Marketing Spots';
+$string['frontpageheading'] = 'Frontpage Options';
 
 //Theme Fonts
 $string['fontselect'] = 'Font Selector';
 $string['fontselectdesc'] = 'Choose from the list of availble font combinations. You can choose here to disable Google fonts if needed.';
+
+//General and Snow Alerts
+$string['generalalert'] = 'General Alert';
+$string['generalalertdesc'] = 'This will display an alert on your frontpage to advise users of a particular event/situation.';
+
+$string['snowalert'] = 'Snow Alert';
+$string['snowalertdesc'] = 'This will display an alert on your frontpage to advise users of closures or information regarding inclement weather.';
 
 //Theme style settings
 $string['backgroundfixed'] = 'Background fixed';
@@ -70,7 +79,7 @@ $string['linkcolor'] = 'Link colour';
 $string['linkcolor_desc'] = 'The colour of the links.';
 $string['logo'] = 'Logo';
 $string['logodesc'] = 'Please upload your custom logo here if you want to add it to the header.<br>
-If the height of your logo is no more than 75px add the following CSS rule to the Custom CSS box below.<br>
+If the height of your logo is mimoodle than 75px add the following CSS rule to the Custom CSS box below.<br>
 a.logo {height: 100px;} or whatever height in pixels the logo is.';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
@@ -80,13 +89,8 @@ $string['textcolor'] = 'Text colour';
 $string['textcolor_desc'] = 'The colour of the text.';
 $string['contentbackground'] = 'Main content background colour';
 $string['contentbackground_desc'] = 'The background colour of the main content of the site, leave empty for none.';
-
-//General and Snow Alerts
-$string['generalalert'] = 'General Alert';
-$string['generalalertdesc'] = 'This will display an alert on your frontpage to advise users of a particular event/situation.';
-
-$string['snowalert'] = 'Snow Alert';
-$string['snowalertdesc'] = 'This will display an alert on your frontpage to advise users of closures or information regarding inclement weather.';
+$string['marketboxcolor'] = 'Marketing Box background colour';
+$string['marketboxcolor_desc'] = 'The colour of the background for the marketing box.';
 
 // My Courses CustomMenu dropdown
 $string['custommenuheadingsub'] = 'Add additional functionality to your custommenu.';
@@ -116,3 +120,50 @@ $string['noenrolments'] = 'You have no current enrolments';
 
 // My Dashboard custommenu dropdown
 $string['mydashboard'] = 'My Dashboard';
+
+
+// Marketing Spots
+
+$string['alwaysdisplay'] = 'Always Show';
+$string['displaybeforelogin'] = 'Show before login only';
+$string['displayafterlogin'] = 'Show after login only';
+$string['dontdisplay'] = 'Never Show';
+$string['marketinginfodesc'] = 'Enter the settings for your marketing spot.';
+$string['marketingheadingsub'] = 'Three locations on the front page to add information and links';
+
+$string['marketingheight'] = 'Height of Marketing Images';
+$string['marketingheightdesc'] = 'If you want to display images in the Marketing boxes you can specify their hight here.';
+$string['marketingdesc'] = 'This theme provides the option of enabling three "marketing" or "ad" spots just under the slideshow.  These allow you to easily identify core information to your users and provide direct links.';
+
+$string['togglemarketing'] = 'Toggle Marketing Spot display';
+$string['togglemarketingdesc'] = 'Choose if you wish to hide or show the three Marketing Spots.';
+
+$string['marketing1'] = 'Marketing Spot One';
+$string['marketing2'] = 'Marketing Spot Two';
+$string['marketing3'] = 'Marketing Spot Three';
+
+$string['marketingtitle'] = 'Title';
+$string['marketingtitledesc'] = 'Title to show in this marketing spot';
+$string['marketingicon'] = 'Icon';
+$string['marketingicondesc'] = 'Name of the icon you wish to use. List is <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_new">here</a>.  Just enter what is after "fa-", e.g. "star".';
+$string['marketingimage'] = 'Image';
+$string['marketingimagedesc'] = 'This provides the option of displaying an image above the text in the marketing spot';
+$string['marketingcontent'] = 'Content';
+$string['marketingcontentdesc'] = 'Content to display in the marketing box. Keep it short and sweet.';
+$string['marketingbuttontext'] = 'Link Text';
+$string['marketingbuttontextdesc'] = 'Text to appear on the button.';
+$string['marketingbuttonurl'] = 'Link URL';
+$string['marketingbuttonurldesc'] = 'URL the button will point to.';
+$string['marketingurltarget'] = 'Link Target';
+$string['marketingurltargetdesc'] = 'Choose how the link should be opened';
+$string['marketingurltargetself'] = 'Current Page';
+$string['marketingurltargetnew'] = 'New Page';
+$string['marketingurltargetparent'] = 'Parent Frame';
+
+//Custom Frontpage Settings
+$string['togglefp'] = 'Frontpage Toggle';
+$string['togglefpdesc'] = 'Turn on or off the custom de-cluttered homepage.';
+$string['fpon'] = 'Turn on custom frontpage';
+$string['fpoff'] = 'Turn off custom frontpage';
+$string['fpbkg'] = 'Frontpage background image';
+$string['fpbkgdesc'] = 'Upload an image to cover the entire background of the page.';
