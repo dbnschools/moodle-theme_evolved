@@ -496,4 +496,13 @@ $ADMIN->add('theme_evolved', $temp);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
+// CustomFP Text setting.
+    $name = 'theme_evolved/fptext';
+    $title = get_string('fptext', 'theme_evolved');
+    $description = get_string('fptextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
 $ADMIN->add('theme_evolved', $temp);

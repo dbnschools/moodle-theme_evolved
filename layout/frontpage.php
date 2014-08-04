@@ -33,7 +33,7 @@ echo $OUTPUT->doctype() ?>
 <!-- Start frontpage on off toggle (Shows frontpage login and information box)-->
   <?php 
         if($PAGE->theme->settings->togglefp==1 && isloggedin()) {
-            require_once(dirname(__FILE__).'/includes/fpnormal.php');
+            require_once(dirname(__FILE__).'/includes/fpcustom_lgin.php');
         } else if($PAGE->theme->settings->togglefp==2) {
             require_once(dirname(__FILE__).'/includes/fpnormal.php');
         } else if($PAGE->theme->settings->togglefp==1) {

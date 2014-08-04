@@ -91,7 +91,8 @@ $string['contentbackground'] = 'Main content background colour';
 $string['contentbackground_desc'] = 'The background colour of the main content of the site, leave empty for none.';
 $string['marketboxcolor'] = 'Marketing Box background colour';
 $string['marketboxcolor_desc'] = 'The colour of the background for the marketing box.';
-
+$string['fptext'] = 'Frontpage Textbox';
+$string['fptextdesc'] = 'Whatever you add to this textarea will be displayed on the custom homepage below the main navigation icons.';
 // My Courses CustomMenu dropdown
 $string['custommenuheadingsub'] = 'Add additional functionality to your custommenu.';
 $string['custommenudesc'] = 'Settings here allow you to add new dynamic functionality to the custommenu (also refered to as Dropdown menu)';
