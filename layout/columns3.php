@@ -74,7 +74,7 @@ echo $OUTPUT->doctype() ?>
 </header>
 
 <div id="page" class="container-fluid">
-
+<?php require_once(dirname(__FILE__).'/includes/alerts.php'); ?>
     <header id="page-header" class="clearfix">
         <?php echo $html->heading; ?>
         <div id="page-navbar" class="clearfix">
