@@ -49,7 +49,6 @@ if (!$left) { ?>
 <div style="display:inline;float:left;"><a href="<?php echo new moodle_url('/my/'); ?>"><img src="<?php echo $OUTPUT->pix_url('myhome', 'theme'); ?>" width="64" height="75" alt="My Personal Dashboard" style="margin-left: 15px; margin-right: 15px;"></a><a href="<?php echo new moodle_url('/calendar/view.php?view=month'); ?>"><img src="<?php echo $OUTPUT->pix_url('calendar', 'theme'); ?>" width="64" height="75" alt="My Calendar" style="margin-left: 15px; margin-right: 15px;"></a><a href="<?php echo new moodle_url('/course/'); ?>"><img src="<?php echo $OUTPUT->pix_url('courses', 'theme'); ?>" width="64" height="75" alt="View All Courses" style="margin-left: 15px; margin-right: 15px;"></a><a href="<?php echo new moodle_url('/badges/mybadges.php'); ?>"><img src="<?php echo $OUTPUT->pix_url('badges', 'theme'); ?>" width="64" height="75" alt="My Badges" style="margin-left: 15px; margin-right: 15px;"></a> </div>
 <div style="display:inline;float:right;padding-right:10px;"><form action="<?php echo new moodle_url('/course/search.php'); ?>" method="get"><fieldset><strong>Find and Enroll in Courses:</strong><br><input type="text" size="10" name="search" value="" /><input type="submit" value="Go" /></fieldset></form></div>
 </div>
-
 <div style="clear:both;"></div>
 <hr>
 <p>

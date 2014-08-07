@@ -24,7 +24,7 @@
 </header>
 
 <div id="page" class="container-fluid">
-
+<?php require_once(dirname(__FILE__).'/alerts.php'); ?>
 <div class="wrap">
 		<div class="avatar">
       <img src="<?php echo $OUTPUT->pix_url('avatar', 'theme'); ?>" alt="Login" />
