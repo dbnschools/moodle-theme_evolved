@@ -29,13 +29,13 @@
 		<div class="avatar">
       <img src="<?php echo $OUTPUT->pix_url('avatar', 'theme'); ?>" alt="Login" />
 		</div>
-<form action="<?php echo new moodle_url('/login/index.php'); ?>" method="post" id="login"  >
+<form action="../login/index.php" method="post" id="login"  >
 		<input type="text" name="username" placeholder="username" required>
 		<div class="bar">
 			<i></i>
 		</div>
 		<input type="password" name="password" placeholder="password" required>
-<a href="<?php echo new moodle_url('/login/index.php'); ?>" class="forgot_link">forgot ?</a>
+<a href="../login/index.php" class="forgot_link">forgot ?</a>
 		<button>Log In</button>
 </form>
 	</div>
