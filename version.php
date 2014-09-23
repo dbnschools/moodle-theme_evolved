@@ -23,9 +23,9 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2014051200;
+$plugin->version   = 2014092300;
 $plugin->maturity = MATURITY_STABLE;              // this version's maturity level.
-$plugin->release = '1.0.0 Tin Lizzy (Build: 20140811)';
+$plugin->release = '1.0.1 Tin Lizzy (Build: 20140923)';
 $plugin->requires  = 2014050800;
 $plugin->component = 'theme_evolved';
 $plugin->dependencies = array(

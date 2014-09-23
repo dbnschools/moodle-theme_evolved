@@ -64,21 +64,6 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page" class="container-fluid">
 
-<div class="wrap">
-		<div class="avatar">
-      <img src="<?php echo $OUTPUT->pix_url('avatar', 'theme'); ?>" alt="Login" />
-		</div>
-<form action="../login/index.php" method="post" id="login"  >
-		<input type="text" name="username" placeholder="username" required>
-		<div class="bar">
-			<i></i>
-		</div>
-		<input type="password" name="password" placeholder="password" required>
-<a href="../login/index.php" class="forgot_link">forgot ?</a>
-		<button>Log In</button>
-</form>
-	</div>
-
     <header id="page-header" class="clearfix" style="display:none;">
            <div id="page-navbar" class="clearfix">
             <div class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></div>
@@ -90,23 +75,17 @@ echo $OUTPUT->doctype() ?>
         </div>
     </header>
 
-    <div id="page-content" class="row-fluid" style="display:none;">
+    <div id="page-content" class="row-fluid">
        
-        <?php
-if (!$left) { ?>
-    <section id="region-main" class="span9 pull-left">
-<?php } else { ?>
-    <section id="region-main" class="span9">
-<?php } ?>
 
+    <section class="span8 pull-right">
         <?php
         echo $OUTPUT->course_content_header();
         echo $OUTPUT->main_content();
         echo $OUTPUT->course_content_footer();
         ?>
     </section>
-        <?php echo $OUTPUT->blocks('side-pre', 'span3'); ?>
-        <?php echo $OUTPUT->blocks('side-post', 'span3 pull-right'); ?>
+
     </div>
 
     <footer id="page-footer">

@@ -126,6 +126,57 @@ overflow: auto;
 	cursor: pointer;
 }
 
+/*.loginbox {
+background: rgba(100,100,100,.2);
+-webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}
+*/
+.loginbox h2{
+color: #DBDBDB;
+}
+
+.loginbox form a{
+color: #fff;
+}
+.loginbox form{
+color: #fff;
+}
+.loginbox p{
+color: #fff;
+}
+
+/*.loginpanel .loginsub {
+background: rgba(0,0,0,.6);
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+margin: 10px;
+}*/
+
+.loginpanel .loginsub {
+background: rgba(0,0,0,.6);
+width:90%;
+-webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}
+/*.signuppanel .subcontent{
+-webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}*/
+
 /* Alerts (aardvark) */
 #page-header-generalalert {
     clear:both;
