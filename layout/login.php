@@ -78,7 +78,7 @@ echo $OUTPUT->doctype() ?>
     <div id="page-content" class="row-fluid">
        
 
-    <section class="span8 pull-right">
+    <section class="span12">
         <?php
         echo $OUTPUT->course_content_header();
         echo $OUTPUT->main_content();

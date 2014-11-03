@@ -127,17 +127,19 @@ overflow: auto;
 }
 
 /*.loginbox {
-background: rgba(100,100,100,.2);
+background: rgba(100,100,100,.1);
+padding:50px;
 -webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -webkit-border-radius:10px;
 -moz-border-radius:10px;
 border-radius:10px;
-}
-*/
+}*/
+
 .loginbox h2{
 color: #DBDBDB;
+text-align:center;
 }
 
 .loginbox form a{
@@ -160,22 +162,27 @@ margin: 10px;
 
 .loginpanel .loginsub {
 background: rgba(0,0,0,.6);
-width:90%;
+max-width:400px;
 -webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -webkit-border-radius:10px;
 -moz-border-radius:10px;
 border-radius:10px;
+margin: auto;
+padding:20px;
 }
-/*.signuppanel .subcontent{
+.signuppanel .subcontent{
+background: rgba(0,0,0,.6);
+max-width:400px;
 -webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -webkit-border-radius:10px;
 -moz-border-radius:10px;
 border-radius:10px;
-}*/
+margin: auto;
+}
 
 /* Alerts (aardvark) */
 #page-header-generalalert {

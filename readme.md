@@ -23,3 +23,8 @@ Tin Lizzy Release Notes:
  - Bootstrap responsive design
  - Stylish block icons to enhance visuals
  - Can be changed from 2 column to 3 column by simply modifying the config.php file to change "columns2rt.php" to "columns3.php"
+
+v1.0.1 "Tin Lizzy" September 2014
+Fixes:
+ - Forgot Password link on custom login page now goes to proper page.
+ - If you want to use the default Moodle Login or https Logins you can do so.  Go to Site Administration > Security > Site Policies and turn on Force Users to Login.  This will activate the login template from the evolve-D theme which still allows for a fullscreen background plus some styling for the standard Moodle login.
