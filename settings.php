@@ -222,6 +222,14 @@ defined('MOODLE_INTERNAL') || die;
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
+    // Background cover setting.
+    $name = 'theme_evolved/backgroundcover';
+    $title = get_string('backgroundcover', 'theme_evolved');
+    $description = get_string('backgroundcover_desc', 'theme_evolved');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
     $ADMIN->add('theme_evolved', $temp);
 
     /* Custom Menu temp */

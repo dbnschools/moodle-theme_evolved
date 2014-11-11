@@ -41,6 +41,9 @@ function theme_evolved_extra_less($theme) {
         if (!empty($theme->settings->backgroundfixed)) {
             $content .= 'background-attachment: fixed;';
         }
+        if (!empty($theme->settings->backgroundcover)) {
+            $content .= 'background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;';
+        }
         if (!empty($theme->settings->backgroundposition)) {
             $content .= 'background-position: ' . str_replace('_', ' ', $theme->settings->backgroundposition) . ';';
         }

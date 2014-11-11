@@ -24,6 +24,10 @@ Tin Lizzy Release Notes:
  - Stylish block icons to enhance visuals
  - Can be changed from 2 column to 3 column by simply modifying the config.php file to change "columns2rt.php" to "columns3.php"
 
+v1.0.2 "Tin Lizzy" November 2014
+Fixes:
+ - login.php template now centers the login form.
+
 v1.0.1 "Tin Lizzy" September 2014
 Fixes:
  - Forgot Password link on custom login page now goes to proper page.

@@ -161,7 +161,7 @@ margin: 10px;
 }*/
 
 .loginpanel .loginsub {
-background: rgba(0,0,0,.6);
+background: rgba(0,0,0,.8);
 max-width:400px;
 -webkit-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -moz-box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
@@ -169,6 +169,7 @@ box-shadow: 1px 0px 29px 14px rgba(255,255,255,0.6);
 -webkit-border-radius:10px;
 -moz-border-radius:10px;
 border-radius:10px;
+border:5px solid #fff;
 margin: auto;
 padding:20px;
 }

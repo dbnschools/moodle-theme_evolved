@@ -48,6 +48,8 @@ $string['snowalertdesc'] = 'This will display an alert on your frontpage to advi
 //Theme style settings
 $string['backgroundfixed'] = 'Background fixed';
 $string['backgroundfixed_desc'] = 'Use this setting to fix the background image to the page.';
+$string['backgroundcover'] = 'Background Full Screen';
+$string['backgroundcover_desc'] = 'Use this setting to make the image full screen.  Best if used with fixed image turned on as well.';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site.';
 $string['backgroundposition'] = 'Background position';
