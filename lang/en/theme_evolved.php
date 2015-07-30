@@ -80,9 +80,8 @@ $string['invertdesc'] = 'Swaps text and background for the navbar at the top of 
 $string['linkcolor'] = 'Link colour';
 $string['linkcolor_desc'] = 'The colour of the links.';
 $string['logo'] = 'Logo';
-$string['logodesc'] = 'Please upload your custom logo here if you want to add it to the header.<br>
-If the height of your logo is mimoodle than 75px add the following CSS rule to the Custom CSS box below.<br>
-a.logo {height: 100px;} or whatever height in pixels the logo is.';
+$string['logodesc'] = 'Please upload your custom logo here if you want to add it to the right of the navigation breadcrumbs.<br>
+The logo should be exactly 150px by 75px.  It will appear to the right of the navigation breadcrumbs.';
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 $string['secondarybackground'] = 'Secondary background colour';
@@ -95,6 +94,12 @@ $string['marketboxcolor'] = 'Marketing Box background colour';
 $string['marketboxcolor_desc'] = 'The colour of the background for the marketing box.';
 $string['fptext'] = 'Frontpage Textbox';
 $string['fptextdesc'] = 'Whatever you add to this textarea will be displayed on the custom homepage below the main navigation icons.';
+//frontpage slideshow images
+$string['back1'] = 'Slideshow 1 of 4';
+$string['back2'] = 'Slideshow 2 of 4';
+$string['back3'] = 'Slideshow 3 of 4';
+$string['back4'] = 'Slideshow 4 of 4';
+$string['backdesc'] = 'These images are used in the custom frontpage slideshow with thumbnails. You must use 4 images.  Preferred size is 900px by 300px. ';
 // My Courses CustomMenu dropdown
 $string['custommenuheadingsub'] = 'Add additional functionality to your custommenu.';
 $string['custommenudesc'] = 'Settings here allow you to add new dynamic functionality to the custommenu (also refered to as Dropdown menu)';
@@ -124,9 +129,7 @@ $string['noenrolments'] = 'You have no current enrolments';
 // My Dashboard custommenu dropdown
 $string['mydashboard'] = 'My Dashboard';
 
-
 // Marketing Spots
-
 $string['alwaysdisplay'] = 'Always Show';
 $string['displaybeforelogin'] = 'Show before login only';
 $string['displayafterlogin'] = 'Show after login only';
@@ -163,10 +166,39 @@ $string['marketingurltargetself'] = 'Current Page';
 $string['marketingurltargetnew'] = 'New Page';
 $string['marketingurltargetparent'] = 'Parent Frame';
 
+// Custom Icons
+$string['togglenavicons'] = 'Turn On Custom Icons';
+$string['togglenaviconsdesc'] = 'Choose to include custom navigation icons based off Font-Awesome.';
+$string['naviconon'] = 'Turn on custom navigation icons';
+$string['naviconoff'] = 'Turn off custom navigation icons';
+
+$string['navicon1'] = 'Custom Frontpage Icon One';
+$string['navicon2'] = 'Custom Frontpage Icon Two';
+$string['navicon3'] = 'Custom Frontpage Icon Three';
+$string['navicon4'] = 'Custom Frontpage Icon Four';
+$string['navicon5'] = 'Custom Frontpage Icon Five';
+$string['navicon6'] = 'Custom Frontpage Icon Six';
+$string['navicon7'] = 'Custom Frontpage Icon Seven';
+$string['navicon8'] = 'Custom Frontpage Icon Eight';
+
+$string['navicon'] = 'Icon';
+$string['navicondesc'] = 'Name of the icon you wish to use. List is <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_new">here</a>.  Just enter what is after "fa-", e.g. "star".';
+$string['naviconbuttontext'] = 'Link Text';
+$string['naviconbuttontextdesc'] = 'Text to appear on the button.';
+$string['naviconbuttonurl'] = 'Link URL';
+$string['naviconbuttonurldesc'] = 'URL the button will point to.';
+
 //Custom Frontpage Settings
 $string['togglefp'] = 'Frontpage Toggle';
-$string['togglefpdesc'] = 'Turn on or off the custom de-cluttered homepage.';
+$string['togglefpdesc'] = 'Turn on or off the custom de-cluttered homepage. When you activate the custom homepage you enable the features below on this page.';
 $string['fpon'] = 'Turn on custom frontpage';
 $string['fpoff'] = 'Turn off custom frontpage';
 $string['fpbkg'] = 'Frontpage background image';
-$string['fpbkgdesc'] = 'Upload an image to cover the entire background of the page.';
+$string['fpbkgdesc'] = 'This is the fullscreen image used on the login page.  Upload an image to cover the entire background of the page.';
+$string['fpsearch'] = 'Find and Enroll in Courses:';
+
+//Frontpage Slideshow toggle
+$string['fpslideshow'] = 'Frontpage Slideshow with Thumbnails';
+$string['fpslideshowdesc'] = 'Turn on or off the slideshow on the custom homepage.';
+$string['fpslideshowon'] = 'Turn slideshow on';
+$string['fpslideshowoff'] = 'Turn slideshow off';

@@ -102,15 +102,28 @@ function theme_evolved_less_variables($theme) {
  * @return string The parsed CSS The parsed CSS.
  */
 function theme_evolved_process_css($css, $theme) {
-
-    // Set the background image for the logo.
-    $logo = $theme->setting_file_url('logo', 'logo');
-    $css = theme_evolved_set_logo($css, $logo);
+     // Set the background image for the logo.
+    $logosmall = $theme->setting_file_url('logosmall', 'logosmall');
+    $css = theme_evolved_set_logosmall($css, $logosmall);
     
     // Set the background image for the frontpage.
     $fpbkg = $theme->setting_file_url('fpbkg', 'fpbkg');
     $css = theme_evolved_set_fpbkg($css, $fpbkg);
-    
+
+    /* Set the fullscreen background image for the frontpage slideshow.
+    $back1 = $theme->setting_file_url('back1', 'back1');
+    $css = theme_evolved_set_back1($css, $back1);
+    // Set the fullscreen background image for the frontpage slideshow.
+    $back2 = $theme->setting_file_url('back2', 'back2');
+    $css = theme_evolved_set_back2($css, $back2);
+    // Set the fullscreen background image for the frontpage slideshow.
+    $back3 = $theme->setting_file_url('back3', 'back3');
+    $css = theme_evolved_set_back3($css, $back3);
+    // Set the fullscreen background image for the frontpage slideshow.
+    $back4 = $theme->setting_file_url('back4', 'back4');
+    $css = theme_evolved_set_back4($css, $back4);
+    */
+
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
@@ -274,9 +287,9 @@ function theme_evolved_set_customcss($css, $customcss) {
  * @param string $logo The URL of the logo.
  * @return string The parsed CSS
  */
-function theme_evolved_set_logo($css, $logo) {
-    $tag = '[[setting:logo]]';
-    $replacement = $logo;
+function theme_evolved_set_logosmall($css, $logosmall) {
+    $tag = '[[setting:logosmall]]';
+    $replacement = $logosmall;
     if (is_null($replacement)) {
         $replacement = '';
     }
@@ -342,6 +355,61 @@ function theme_evolved_set_fpbkg($css, $fpbkg) {
 }
 
 /**
+ * Adds the frontpage background to CSS slideshow.
+ */
+/*function theme_evolved_set_back1($css, $back1) {
+    $tag = '[[setting:back1]]';
+    $replacement = $back1;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+/**
+ * Adds the frontpage background to CSS slideshow.
+ */
+/*function theme_evolved_set_back2($css, $back2) {
+    $tag = '[[setting:back2]]';
+    $replacement = $back2;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+/**
+ * Adds the frontpage background to CSS slideshow.
+ */
+/*function theme_evolved_set_back3($css, $back3) {
+    $tag = '[[setting:back3]]';
+    $replacement = $back3;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}/**
+ * Adds the frontpage background to CSS slideshow.
+ */
+/*function theme_evolved_set_back4($css, $back4) {
+    $tag = '[[setting:back4]]';
+    $replacement = $back4;
+    if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+/**
  * Serves any files associated with the theme settings.
  *
  * @param stdClass $course
@@ -354,7 +422,7 @@ function theme_evolved_set_fpbkg($css, $fpbkg) {
  * @return bool
  */
 function theme_evolved_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' || $filearea === 'fpbkg')) {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logosmall' || $filearea === 'backgroundimage' || $filearea === 'back1' || $filearea === 'back2' || $filearea === 'back3' || $filearea === 'back4' || $filearea === 'fpbkg')) {
         $theme = theme_config::load('evolved');
         return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else {
@@ -375,13 +443,9 @@ function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
     return $css;
 }
 
-//Load Jquery
+/**
+ * Page requires jQuery. */
+
 function theme_evolved_page_init(moodle_page $page) {
-$page->requires->jquery();
 $page->requires->jquery_plugin('tab', 'theme_evolved');
-$page->requires->jquery_plugin('modal', 'theme_evolved');
-$page->requires->jquery_plugin('tooltip', 'theme_evolved');
-$page->requires->jquery_plugin('transition', 'theme_evolved');
-$page->requires->jquery_plugin('collapse', 'theme_evolved');
-$page->requires->jquery_plugin('modernizr', 'theme_evolved');
 }

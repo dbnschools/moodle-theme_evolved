@@ -34,7 +34,7 @@
             <h5><span><i class="fa fa-<?php echo $PAGE->theme->settings->marketing1icon ?>"></i> <?php echo $PAGE->theme->settings->marketing1 ?></span></h5>
             <?php echo $PAGE->theme->settings->marketing1content ?>
             <p align="right">
-                <a href="<?php echo $PAGE->theme->settings->marketing1buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing1target ?>" id="button">
+                <a href="<?php echo $PAGE->theme->settings->marketing1buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing1target ?>" class="btn btn-danger">
                     <?php echo $PAGE->theme->settings->marketing1buttontext ?>
                 </a>
             </p>
@@ -48,7 +48,7 @@
             <h5><span><i class="fa fa-<?php echo $PAGE->theme->settings->marketing2icon ?>"></i> <?php echo $PAGE->theme->settings->marketing2 ?></span></h5>
             <?php echo $PAGE->theme->settings->marketing2content ?>
             <p align="right">
-                <a href="<?php echo $PAGE->theme->settings->marketing2buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing2target ?>" id="button">
+                <a href="<?php echo $PAGE->theme->settings->marketing2buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing2target ?>" class="btn btn-danger">
                     <?php echo $PAGE->theme->settings->marketing2buttontext ?>
                 </a>
             </p>
@@ -63,7 +63,7 @@
             
             <?php echo $PAGE->theme->settings->marketing3content ?>
             <p align="right">
-                <a href="<?php echo $PAGE->theme->settings->marketing3buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing3target ?>" id="button">
+                <a href="<?php echo $PAGE->theme->settings->marketing3buttonurl ?>" target="<?php echo $PAGE->theme->settings->marketing3target ?>" class="btn btn-danger">
                     <?php echo $PAGE->theme->settings->marketing3buttontext ?>
                 </a>
             </p>

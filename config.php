@@ -25,7 +25,7 @@
 $THEME->name = 'evolved';
 $THEME->parents = array('clean', 'bootstrapbase');
 $THEME->doctype = 'html5';
-$THEME->sheets = array('custom','evolved');
+$THEME->sheets = array('evolved', 'font-awesome', 'custom');
 $THEME->lessfile = 'moodle';
 $THEME->parents_exclude_sheets = array('bootstrapbase' => array('moodle'), 'clean' => array('custom'));
 $THEME->lessvariablescallback = 'theme_evolved_less_variables';
@@ -140,7 +140,7 @@ $THEME->layouts = array(
     ),
     // The pagelayout used for reports.
     'report' => array(
-        'file' => 'columns2rt.php',
+        'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),

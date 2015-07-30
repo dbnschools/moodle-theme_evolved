@@ -5,17 +5,19 @@
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
+                format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
+                ?></a>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
+            <?php echo $OUTPUT->user_menu(); ?>
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                    <li class="navbar-text"><?php echo $OUTPUT->login_info() ?></li>
                 </ul>
             </div>
         </div>
@@ -29,11 +31,7 @@
     <header id="page-header" class="clearfix">
         <div id="page-navbar" class="clearfix">
             <div class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></div>
-            <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
-        </div>
-        <?php echo $html->heading; ?>
-        <div id="course-header">
-            <?php echo $OUTPUT->course_header(); ?>
+            <nav class="breadcrumb-button logosmall"></nav>
         </div>
     </header>
 
@@ -44,6 +42,15 @@ if (!$left) { ?>
     <section id="region-main" class="span9 pull-left">
 <?php } else { ?>
     <section id="region-main" class="span9">
+            <div class="course-title">
+         <div id="editbutton">
+      <?php echo $OUTPUT->page_heading_button(); ?>
+      </div>
+    <?php echo $html->heading; ?>
+    </div>
+        <div id="course-header">
+            <?php echo $OUTPUT->course_header(); ?>
+        </div>
 <?php } ?>
 
         <?php

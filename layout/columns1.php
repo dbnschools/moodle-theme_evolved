@@ -34,7 +34,6 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google web fonts -->
     <?php require_once(dirname(__FILE__).'/includes/fonts.php'); ?>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' />
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
@@ -64,18 +63,23 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
 <?php require_once(dirname(__FILE__).'/includes/alerts.php'); ?>
     <header id="page-header" class="clearfix">
-        <?php echo $html->heading; ?>
         <div id="page-navbar" class="clearfix">
             <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
-        </div>
-        <div id="course-header">
-            <?php echo $OUTPUT->course_header(); ?>
+            <div class="breadcrumb-button logosmall"></div>
         </div>
     </header>
 
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="span12">
+            <div class="course-title">
+         <div id="editbutton">
+      <?php echo $OUTPUT->page_heading_button(); ?>
+      </div>
+    <?php echo $html->heading; ?>
+    </div>
+        <div id="course-header">
+            <?php echo $OUTPUT->course_header(); ?>
+        </div>
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();

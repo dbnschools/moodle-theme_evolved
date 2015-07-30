@@ -34,51 +34,38 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google web fonts -->
     <?php require_once(dirname(__FILE__).'/includes/fonts.php'); ?>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' />
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' /> -->
 </head>
 
-
 <body id="fullbkg">
-
+    
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
+                format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
+                ?></a>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
+            <?php echo $OUTPUT->user_menu(); ?>
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                    <li class="navbar-text"><?php echo $OUTPUT->login_info() ?></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 
-<div id="page" class="container-fluid">
-
-    <header id="page-header" class="clearfix" style="display:none;">
-           <div id="page-navbar" class="clearfix">
-            <div class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></div>
-            <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
-        </div>
-        <?php echo $html->heading; ?>
-        <div id="course-header">
-            <?php echo $OUTPUT->course_header(); ?>
-        </div>
-    </header>
-
-    <div id="page-content" class="row-fluid">
+<div id="page-content" class="row-fluid">
        
-
-    <section class="span12">
+   <section>
         <?php
         echo $OUTPUT->course_content_header();
         echo $OUTPUT->main_content();
@@ -86,10 +73,10 @@ echo $OUTPUT->doctype() ?>
         ?>
     </section>
 
-    </div>
+</div>
 
     <footer id="page-footer">
-<!-- Start Marketing Spots -->
+    <!-- Start Marketing Spots -->
     <?php 
         if($PAGE->theme->settings->togglemarketing==1) {
             require_once(dirname(__FILE__).'/includes/marketingspots.php');
@@ -102,7 +89,7 @@ echo $OUTPUT->doctype() ?>
     <!-- End Marketing Spots -->
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
-        <?php
+     <?php
         echo $html->footnote;
         echo $OUTPUT->login_info();
         echo $OUTPUT->home_link();
@@ -112,6 +99,5 @@ echo $OUTPUT->doctype() ?>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
-</div>
 </body>
 </html>

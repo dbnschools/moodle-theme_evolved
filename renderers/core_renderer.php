@@ -24,7 +24,49 @@
  */
  
  class theme_evolved_core_renderer extends theme_bootstrapbase_core_renderer {
-		
+		    /*
+     * This renders the navbar.
+     * Uses bootstrap compatible html.
+     */
+    public function navbar() {
+        $items = $this->page->navbar->get_items();
+        if (empty($items)) {
+            return '';
+        }
+        $breadcrumbs = array();
+        foreach ($items as $item) {
+            $item->hideicon = true;
+            $breadcrumbs[] = $this->render($item);
+        }
+        $divider = '';
+        $list_items = '<li>'.join(" $divider</li><li>", $breadcrumbs).'</li>';
+        $title = '<span class="accesshide">'.get_string('pagepath').'</span>';
+        return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
+    }
+/**
+     * Returns HTML to display a "Turn editing on/off" button in a form.
+     *
+     * @param moodle_url $url The URL + params to send through when clicking the button
+     * @return string HTML the button
+     * Written by G J Barnard
+     */
+
+    public function edit_button(moodle_url $url) {
+        $url->param('sesskey', sesskey());
+        if ($this->page->user_is_editing()) {
+            $url->param('edit', 'off');
+            $btn = 'btn-danger';
+            $title = get_string('turneditingoff');
+            $icon = 'fa-power-off';
+        } else {
+            $url->param('edit', 'on');
+            $btn = 'btn-success';
+            $title = get_string('turneditingon');
+            $icon = 'fa-edit';
+        }
+        return html_writer::tag('a', html_writer::start_tag('i', array('class' => $icon . ' fa fa-fw')) .
+            html_writer::end_tag('i') . $title, array('href' => $url, 'class' => 'btn ' . $btn, 'title' => $title));
+    }
     protected function render_custom_menu(custom_menu $menu) {
     	/*
     	* This code replaces adds the current enrolled
@@ -61,27 +103,9 @@
             
         }
 
-        /*
-    	* This code replaces adds the My Dashboard
-    	* functionality to the custommenu.
-    	*/
-        $hasdisplaymydashboard = (empty($this->page->theme->settings->displaymydashboard)) ? false : $this->page->theme->settings->displaymydashboard;
-        if (isloggedin() && !isguestuser() && $hasdisplaymydashboard) {
-            $branchlabel = '<i class="fa fa-dashboard"></i>'.get_string('mydashboard', 'theme_evolved');
-            $branchurl   = new moodle_url('/my/index.php');
-            $branchtitle = get_string('mydashboard', 'theme_evolved');
-            $branchsort  = 10000;
- 
-            $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
- 			$branch->add(get_string('profile').'</em>',new moodle_url('/user/profile.php'),get_string('profile'));
- 			$branch->add(get_string('pluginname', 'block_calendar_month').'</em>',new moodle_url('/calendar/view.php'),get_string('pluginname', 'block_calendar_month'));
- 			$branch->add(get_string('pluginname', 'block_messages').'</em>',new moodle_url('/message/index.php'),get_string('pluginname', 'block_messages'));
- 			$branch->add(get_string('badges').'</em>',new moodle_url('/badges/mybadges.php'),get_string('badges'));
- 			$branch->add(get_string('privatefiles', 'block_private_files').'</em>',new moodle_url('/user/files.php'),get_string('privatefiles', 'block_private_files'));
- 			$branch->add(get_string('logout').'</em>',new moodle_url('/login/logout.php'),get_string('logout'));    
-        }
-
         return parent::render_custom_menu($menu);
 	}
 }
+
+
 ?>

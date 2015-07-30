@@ -46,27 +46,29 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google web fonts -->
     <?php require_once(dirname(__FILE__).'/includes/fonts.php'); ?>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' />
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' /> -->
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?> moodle-has-zindex">
+<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
-            <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
+                format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
+                ?></a>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
+            <?php echo $OUTPUT->user_menu(); ?>
             <div class="nav-collapse collapse">
                 <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                    <li class="navbar-text"><?php echo $OUTPUT->login_info() ?></li>
                 </ul>
             </div>
         </div>
@@ -76,20 +78,27 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
 <?php require_once(dirname(__FILE__).'/includes/alerts.php'); ?>
     <header id="page-header" class="clearfix">
-        <?php echo $html->heading; ?>
+
         <div id="page-navbar" class="clearfix">
             <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></div>
+            <div class="breadcrumb-button logosmall"></div>
         </div>
-        <div id="course-header">
-            <?php echo $OUTPUT->course_header(); ?>
-        </div>
+        
     </header>
 
     <div id="page-content" class="row-fluid">
         <div id="<?php echo $regionbsid ?>" class="span9">
             <div class="row-fluid">
                 <section id="region-main" class="span8 pull-right">
+                    <div class="course-title">
+         <div id="editbutton">
+      <?php echo $OUTPUT->page_heading_button(); ?>
+      </div>
+    <?php echo $html->heading; ?>
+    </div>
+    <div id="course-header">
+            <?php echo $OUTPUT->course_header(); ?>
+    </div>
                     <?php
                     echo $OUTPUT->course_content_header();
                     echo $OUTPUT->main_content();

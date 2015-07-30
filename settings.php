@@ -81,10 +81,10 @@ defined('MOODLE_INTERNAL') || die;
     $temp->add($setting);
 
     // Logo file setting.
-    $name = 'theme_evolved/logo';
+    $name = 'theme_evolved/logosmall';
     $title = get_string('logo','theme_evolved');
     $description = get_string('logodesc', 'theme_evolved');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'logosmall');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
@@ -164,7 +164,7 @@ defined('MOODLE_INTERNAL') || die;
     $name = 'theme_evolved/bodybackground';
     $title = get_string('bodybackground', 'theme_evolved');
     $description = get_string('bodybackground_desc', 'theme_evolved');
-    $default = '#FFFBFF';
+    $default = '#0370A5';
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
@@ -221,7 +221,7 @@ defined('MOODLE_INTERNAL') || die;
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
-
+    
     // Background cover setting.
     $name = 'theme_evolved/backgroundcover';
     $title = get_string('backgroundcover', 'theme_evolved');
@@ -258,7 +258,7 @@ defined('MOODLE_INTERNAL') || die;
 	$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 	$setting->set_updatedcallback('theme_reset_all_caches');
 	$temp->add($setting);
-
+/*
     // Toggle dashboard display in custommenu.
     $name = 'theme_evolved/displaymydashboard';
     $title = get_string('displaymydashboard', 'theme_evolved');
@@ -267,7 +267,7 @@ defined('MOODLE_INTERNAL') || die;
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
-
+*/
 $ADMIN->add('theme_evolved', $temp);
 
     /* Marketing Spot Settings temp*/
@@ -277,7 +277,7 @@ $ADMIN->add('theme_evolved', $temp);
     $name = 'theme_evolved/marketboxcolor';
     $title = get_string('marketboxcolor', 'theme_evolved');
     $description = get_string('marketboxcolor_desc', 'theme_evolved');
-    $default = '#3d3d3d';
+    $default = '#FFFFFF';
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
@@ -503,6 +503,47 @@ $ADMIN->add('theme_evolved', $temp);
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'fpbkg');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
+// Slide Show Background Images for Login Page
+    // fullscreen image slideshow file setting.
+    // Toggle custom frontpage on or off.
+    $name = 'theme_evolved/fpslideshow';
+    $title = get_string('fpslideshow' , 'theme_evolved');
+    $description = get_string('fpslideshowdesc', 'theme_evolved');
+    $fpslideshowon = get_string('fpslideshowon', 'theme_evolved');
+    $fpslideshowoff = get_string('fpslideshowoff', 'theme_evolved');
+    $default = '2';
+    $choices = array('1'=>$fpslideshowon, '2'=>$fpslideshowoff);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    $name = 'theme_evolved/back1';
+    $title = get_string('back1','theme_evolved');
+    $description = get_string('backdesc', 'theme_evolved');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'back1');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    // fullscreen image slideshow file setting.
+    $name = 'theme_evolved/back2';
+    $title = get_string('back2','theme_evolved');
+    $description = get_string('backdesc', 'theme_evolved');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'back2');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    // fullscreen image slideshow file setting.
+    $name = 'theme_evolved/back3';
+    $title = get_string('back3','theme_evolved');
+    $description = get_string('backdesc', 'theme_evolved');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'back3');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    // fullscreen image slideshow file setting.
+    $name = 'theme_evolved/back4';
+    $title = get_string('back4','theme_evolved');
+    $description = get_string('backdesc', 'theme_evolved');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'back4');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
 
 // CustomFP Text setting.
     $name = 'theme_evolved/fptext';
@@ -510,6 +551,265 @@ $ADMIN->add('theme_evolved', $temp);
     $description = get_string('fptextdesc', 'theme_evolved');
     $default = '';
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+//Custom Navigation Icons on homepage
+    
+    // This is the descriptor for icon One
+    $name = 'theme_evolved/navicon1info';
+    $heading = get_string('navicon1', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    // icon One
+    $name = 'theme_evolved/nav1icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'home';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav1buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = 'My Home';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav1buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = 'my/';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // icon two
+    // This is the descriptor for icon One
+    $name = 'theme_evolved/navicon2info';
+    $heading = get_string('navicon2', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav2icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'calendar';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav2buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = 'Calendar';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav2buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = 'calendar/view.php?view=month';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // icon three
+    // This is the descriptor for icon three
+    $name = 'theme_evolved/navicon3info';
+    $heading = get_string('navicon3', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav3icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'bookmark';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav3buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = 'Badges';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav3buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = 'badges/mybadges.php';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+
+    // Marketing Spot Four
+    // This is the descriptor for icon four
+    $name = 'theme_evolved/navicon4info';
+    $heading = get_string('navicon4', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav4icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'book';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav4buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = 'Courses';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav4buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = 'course/';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+        // Marketing Spot five
+    // This is the descriptor for icon four
+    $name = 'theme_evolved/navicon5info';
+    $heading = get_string('navicon5', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav5icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav5buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav5buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+        // Marketing Spot six
+    // This is the descriptor for icon six
+    $name = 'theme_evolved/navicon6info';
+    $heading = get_string('navicon6', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav6icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav6buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav6buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+        // Marketing Spot Seven
+    // This is the descriptor for icon seven
+    $name = 'theme_evolved/navicon7info';
+    $heading = get_string('navicon7', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav7icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav7buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav7buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+        // Marketing Spot eight
+    // This is the descriptor for icon eight
+    $name = 'theme_evolved/navicon8info';
+    $heading = get_string('navicon8', 'theme_evolved');
+    $information = get_string('navicondesc', 'theme_evolved');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $temp->add($setting);
+
+    $name = 'theme_evolved/nav8icon';
+    $title = get_string('navicon', 'theme_evolved');
+    $description = get_string('navicondesc', 'theme_evolved');
+    $default = 'star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav8buttontext';
+    $title = get_string('naviconbuttontext', 'theme_evolved');
+    $description = get_string('naviconbuttontextdesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+    
+    $name = 'theme_evolved/nav8buttonurl';
+    $title = get_string('naviconbuttonurl', 'theme_evolved');
+    $description = get_string('naviconbuttonurldesc', 'theme_evolved');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 

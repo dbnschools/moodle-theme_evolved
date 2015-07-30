@@ -25,10 +25,11 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Google web fonts -->
+<!-- Google web fonts -->
     <?php require_once(dirname(__FILE__).'/includes/fonts.php'); ?>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type='text/css' />
 </head>
+
+
 
 <!-- Start frontpage on off toggle (Shows frontpage login and information box)-->
   <?php 
@@ -40,8 +41,6 @@ echo $OUTPUT->doctype() ?>
             require_once(dirname(__FILE__).'/includes/fpcustom.php');
         } 
     ?>
-<!-- End frontpage on off toggle -->
-
 
     <footer id="page-footer">
 <!-- Start Marketing Spots -->
@@ -55,7 +54,7 @@ echo $OUTPUT->doctype() ?>
         } 
     ?>
     <!-- End Marketing Spots -->
-        <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
+    <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
         <?php
         echo $html->footnote;
@@ -67,6 +66,5 @@ echo $OUTPUT->doctype() ?>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
-</div></div>
 </body>
 </html>

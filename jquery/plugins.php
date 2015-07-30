@@ -31,16 +31,11 @@
  * Themes or other plugin may blacklist any jquery plugin,
  * for example to override default jQueryUI theme.
  *
- * @package    core
- * @copyright  2013 Petr Skoda  {@link http://skodak.org}
+ * @package    theme_cle
+ * @copyright  2015 bylazydaisy.uk
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $plugins = array(
-    'modernizr'     => array('files' => array('modernizr_2.6.2.js')),
-    'collapse'     => array('files' => array('bootstrap_plugins/collapse_2.3.2.js')),
-    'modal'     => array('files' => array('bootstrap_plugins/modal_2.3.2.js')),
-    'tab'     => array('files' => array('bootstrap_plugins/tab_2.3.2.js')),
-    'tooltip'     => array('files' => array('bootstrap_plugins/tooltip_2.3.2.js')),
-    'transition'     => array('files' => array('bootstrap_plugins/transition_2.3.2.js')),
+    'tab' => array('files' => array('plugins/bootstrap-tab.js')),
 );
