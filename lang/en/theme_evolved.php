@@ -34,6 +34,7 @@ $string['custommenuheading'] = 'Custom Menu';
 $string['marketingheading'] = 'Marketing Spots';
 $string['frontpageheading'] = 'Frontpage Options';
 $string['socialwallheading'] = 'Socialwall Course Format Options';
+$string['socialwallheaddesc'] = 'Socialwall Course format is a set of course format plugins for Moodle that provides teachers with an easy to use course that operates similar to Facebook.  You can download the Socialwall Course Format from Moodle.org <a href="https://moodle.org/plugins/browse.php?list=set&id=74">https://moodle.org/plugins/browse.php?list=set&id=74</a>.  The settings below allow you to customize the colors of the socialwall.';
 
 //Theme Fonts
 $string['fontselect'] = 'Font Selector';

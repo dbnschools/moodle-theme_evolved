@@ -39,7 +39,6 @@ defined('MOODLE_INTERNAL') || die;
 
     // "geneictemp" settingpage
     $temp = new admin_settingpage('theme_evolved_generic',  get_string('geneicsettings', 'theme_evolved'));
-    
     // Font Selector.
     $name = 'theme_evolved/fontselect';
     $title = get_string('fontselect' , 'theme_evolved');
@@ -829,6 +828,8 @@ $ADMIN->add('theme_evolved', $temp);
 
 /*Socialwall Settings temp*/
 $temp = new admin_settingpage('theme_evolved_socialwall', get_string('socialwallheading', 'theme_evolved'));
+$temp->add(new admin_setting_heading('theme_evolved_socialwallheading', get_string('socialwallheaddesc', 'theme_evolved')));
+
     // Socialwall add a post bkg color.
     $name = 'theme_evolved/swaddpost';
     $title = get_string('swaddpost', 'theme_evolved');
