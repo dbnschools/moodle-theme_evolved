@@ -8,6 +8,7 @@
             <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
                 format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
                 ?></a>
+                <?php echo $OUTPUT->custom_menu(); ?>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -15,7 +16,6 @@
             </a>
             <?php echo $OUTPUT->user_menu(); ?>
             <div class="nav-collapse collapse">
-                <?php echo $OUTPUT->custom_menu(); ?>
                 <ul class="nav pull-right">
                     <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
                 </ul>
@@ -32,13 +32,13 @@
         <img src="<?php echo $OUTPUT->pix_url('avatar', 'theme'); ?>" alt="Login" />
 	   </div>
         <form action="<?php echo new moodle_url('/login/index.php'); ?>" method="post" id="login"  >
-		<input type="text" name="username" placeholder="username" required>
+		<input type="text" name="username" placeholder="<?php echo get_string('lginuser' , 'theme_evolved'); ?>" required>
 		<div class="bar">
 			<i></i>
 	   </div>
-		<input type="password" name="password" placeholder="password" required>
-        <a href="<?php echo new moodle_url('/login/forgot_password.php'); ?>" class="forgot_link">forgot ?</a>
-		<button>Log In</button>
+		<input type="password" name="password" placeholder="<?php echo get_string('lginpass' , 'theme_evolved'); ?>" required>
+        <a href="<?php echo new moodle_url('/login/forgot_password.php'); ?>" class="forgot_link"><?php echo get_string('lginforgot' , 'theme_evolved'); ?></a>
+		<button><?php echo get_string('lginlogin' , 'theme_evolved'); ?></button>
         </form>
     </div>
 </section>

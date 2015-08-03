@@ -125,6 +125,9 @@ $string['allunits'] = 'All Units';
 $string['allmodules'] = 'All Modules';
 $string['allclasses'] = 'All Classes';
 $string['noenrolments'] = 'You have no current enrolments';
+$string['thiscourse'] = 'Activities';
+$string['people'] = 'Classmates';
+$string['grades'] = 'My Grades';
 
 // My Dashboard custommenu dropdown
 $string['mydashboard'] = 'My Dashboard';
@@ -202,3 +205,9 @@ $string['fpslideshow'] = 'Frontpage Slideshow with Thumbnails';
 $string['fpslideshowdesc'] = 'Turn on or off the slideshow on the custom homepage.';
 $string['fpslideshowon'] = 'Turn slideshow on';
 $string['fpslideshowoff'] = 'Turn slideshow off';
+
+//Custom Login Page 
+$string['lginuser'] = 'username';
+$string['lginpass'] = 'password';
+$string['lginforgot'] = 'forgot ?';
+$string['lginlogin'] = 'Log In';

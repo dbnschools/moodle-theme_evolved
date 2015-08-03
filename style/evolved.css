@@ -741,8 +741,42 @@ border-right: 1px solid #ccc;
 margin:0px;
 }
 
+/* Socialwall Language Strings based on popular languages.  These are only visible when you use the Socialwall Course format plugin. */
+.lang-en.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Attachments"; }
+.lang-en.format-socialwall .tl-comments:before { content: "\f0e6  Comments"; }
+.lang-en.format-socialwall .tl-posttext:before{ content: "\f0e5  Message"; }
+.lang-en.format-socialwall .tl-post:before{ content: "\f086  Post" }
+.lang-en_us.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Attachments"; }
+.lang-en_us.format-socialwall .tl-comments:before { content: "\f0e6  Comments"; }
+.lang-en_us.format-socialwall .tl-posttext:before{ content: "\f0e5  Message"; }
+.lang-en_us.format-socialwall .tl-post:before{ content: "\f086  Post" }
+
+.lang-es.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Anexos"; }
+.lang-es.format-socialwall .tl-comments:before { content: "\f0e6  Comentarios"; }
+.lang-es.format-socialwall .tl-posttext:before{ content: "\f0e5  Mensaje"; }
+.lang-es.format-socialwall .tl-post:before{ content: "\f086  Publicación" }
+
+.lang-de.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Zubehör"; }
+.lang-de.format-socialwall .tl-comments:before { content: "\f0e6  Comments"; }
+.lang-de.format-socialwall .tl-posttext:before{ content: "\f0e5  Nachricht"; }
+.lang-de.format-socialwall .tl-post:before{ content: "\f086  Post" }
+
+.lang-es_mx.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Anexos"; }
+.lang-es_mx.format-socialwall .tl-comments:before { content: "\f0e6  Comentarios"; }
+.lang-es_mx.format-socialwall .tl-posttext:before{ content: "\f0e5  Mensaje"; }
+.lang-es_mx.format-socialwall .tl-post:before{ content: "\f086  Publicación" }
+
+.lang-fr.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Pièces jointes"; }
+.lang-fr.format-socialwall .tl-comments:before { content: "\f0e6  Commentaires"; }
+.lang-fr.format-socialwall .tl-posttext:before{ content: "\f0e5  Message"; }
+.lang-fr.format-socialwall .tl-post:before{ content: "\f086  Poste" }
+
+.lang-it.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Allegati"; }
+.lang-it.format-socialwall .tl-comments:before { content: "\f0e6  Commenti"; }
+.lang-it.format-socialwall .tl-posttext:before{ content: "\f0e5  Messaggio"; }
+.lang-it.format-socialwall .tl-post:before{ content: "\f086  Posta" }
+
 .format-socialwall ul.section.tl-postattachment:before {
-  content: "\f0c6  Attachments";
   color:#A83116;
   line-height: 20px;
   horizontal-aling: ;
@@ -758,7 +792,6 @@ margin:0px;
   border-bottom:2px solid #ccc;
 }
 .format-socialwall .tl-comments:before {
-  content: "\f0e6  Comments";
   color:#A83116;
   line-height: 20px;
   horizontal-aling: ;
@@ -773,9 +806,7 @@ margin:0px;
   width:100%;
   text-align: center;
 }
-
 .format-socialwall .tl-posttext:before{
-  content: "\f0e5  Message";
   color:#A83116;
   line-height: 20px;
   horizontal-aling: ;
@@ -791,9 +822,7 @@ margin:0px;
   width:100%;
   text-align: center;
 }
-
 .format-socialwall .tl-post:before{
-  content: "\f086  Post";
   color:#A83116;
   line-height: 20px;
   horizontal-aling: ;
@@ -807,6 +836,8 @@ margin:0px;
   padding-left:15px;
   text-align: center;
 }
+/*  End CSS :before Text strings for socialwall */
+
 
 .format-socialwall .tl-text {
 margin-left: 40px;
@@ -988,4 +1019,29 @@ On click the images will be displayed at normal size to complete the effect
   opacity: 1;
   transform: scale(1);
 }
-/*Clicking on any thumbnail now should activate the image related to it*/
+
+
+
+/*Section and Weekly CSS to add visual cue to learner of topic or weekly break in content.*/
+#page-course-view-topics .course-content ul.topics li.section {
+  padding-bottom: 20px;
+  margin-top: 0;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  padding: 10px;
+  margin-bottom: 60px;
+  border-bottom: 0px;
+  background-color: #FFFFFF;
+}
+
+#page-course-view-weeks .course-content ul.weeks li.section {
+  padding-bottom: 20px;
+  margin-top: 0;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  padding: 10px;
+  margin-bottom: 60px;
+  border-bottom: 0px;
+  background-color: #FFFFFF;
+}
+
+h3.sectionname {border-bottom: 2px solid #000;}
+/*  end topic/weekly break  */
