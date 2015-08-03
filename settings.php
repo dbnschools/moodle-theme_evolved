@@ -35,7 +35,7 @@ $settings = null;
 defined('MOODLE_INTERNAL') || die;
 
 
-	$ADMIN->add('themes', new admin_category('theme_evolved', 'evolve-D'));
+	$ADMIN->add('themes', new admin_category('theme_evolved', 'Evolve-D'));
 
     // "geneictemp" settingpage
     $temp = new admin_settingpage('theme_evolved_generic',  get_string('geneicsettings', 'theme_evolved'));
