@@ -708,7 +708,7 @@ margin-top: 0;
   visibility: hidden;
 }
 .format-socialwall #section-2 .content {
-background-color: #f7f7f7;
+background-color: [[setting:swaddpost]];
 padding: 10px;
 margin: 0px;
 border: 3px solid #d4d4d4;
@@ -726,7 +726,7 @@ padding:15px;
 }
 
 .format-socialwall .tl-posttext {
-background-color: #F5F5F5;
+background-color: [[setting:swmessage]];
 padding: 10px 10px 20px 10px;
 border-radius: 10px 10px 0px 0px;
 border: 1px solid #ccc;
@@ -734,7 +734,7 @@ margin-top: 10px;
 }
 
 .format-socialwall ul.section.tl-postattachment {
-background-color: #F6FAA0;
+background-color: [[setting:swattach]];
 padding: 5px 5px 5px 50px;
 border-left: 1px solid #ccc;
 border-right: 1px solid #ccc;
@@ -847,19 +847,22 @@ border: 2px solid #efefef;
 -webkit-box-shadow: 0 0 25px #000;
 box-shadow: 0px 0px 25px #000;
 border-radius: 4px 4px 4px 4px;
-background-color: #fff;
+background-color: [[setting:swpost]];
 }
 
 .format-socialwall .tl-comments {
 padding:15px;
 margin:0px;
 }
+
 .format-socialwall .tl-comments .tl-text {
   border: 2px solid #ccc;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: [[setting:swcomment]];
 }
+
 .format-socialwall .tl-comment {
 padding-left:25px;
 padding-top: 0px;
@@ -869,7 +872,7 @@ padding-bottom: 0px;
 .format-socialwall .tl-post-actionarea {
 border: 1px solid #ccc;
 padding: 4px 4px 10px 4px;
-background: #F0F3F7;
+background: [[setting:swmessage]];
 border-radius: 0px 0px 5px 5px;
 }
 

@@ -33,6 +33,7 @@ $string['themecolorsettings'] = 'Theme Colors';
 $string['custommenuheading'] = 'Custom Menu';
 $string['marketingheading'] = 'Marketing Spots';
 $string['frontpageheading'] = 'Frontpage Options';
+$string['socialwallheading'] = 'Socialwall Course Format Options';
 
 //Theme Fonts
 $string['fontselect'] = 'Font Selector';
@@ -98,6 +99,16 @@ $string['topicweekcolor'] = 'Topic and Week Section Background';
 $string['topicweekcolor_desc'] = 'In Topic and Weekly course formats this is the background color for each topic or week in the course.';
 $string['swicontext'] = 'Socialwall Course Format Icon and Text colors';
 $string['swicontext_desc'] = 'If you use the Socialwall Course Format this setting will change the colors of the icons and words Attachments, Posts, Message, and Comments in the wall feed.';
+$string['swpost'] = 'Socialwall Course Format Post background';
+$string['swpost_desc'] = 'If you use the Socialwall Course Format this setting will change the background color of posts in the wall feed.';
+$string['swaddpost'] = 'Socialwall Course Format Add Post background';
+$string['swaddpost_desc'] = 'If you use the Socialwall Course Format this setting will change the background color of Add Posts area in the wall feed.';
+$string['swmessage'] = 'Socialwall Course Format Message background';
+$string['swmessage_desc'] = 'If you use the Socialwall Course Format this setting will change the background color of message text area in the wall feed.';
+$string['swattach'] = 'Socialwall Course Format Attachment background';
+$string['swattach_desc'] = 'If you use the Socialwall Course Format this setting will change the background color of the attachment area in the wall feed.';
+$string['swcomment'] = 'Socialwall Course Format comment background';
+$string['swcomment_desc'] = 'If you use the Socialwall Course Format this setting will change the background color of the comment area in the wall feed.';
 
 
 //frontpage slideshow images

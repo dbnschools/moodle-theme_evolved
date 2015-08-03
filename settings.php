@@ -170,16 +170,7 @@ defined('MOODLE_INTERNAL') || die;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
-
-    // Socialwall Icon and text color.
-    $name = 'theme_evolved/swicontext';
-    $title = get_string('swicontext', 'theme_evolved');
-    $description = get_string('swicontext_desc', 'theme_evolved');
-    $default = '#A83116';
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $temp->add($setting);
-
+    
     // @bodyBackground setting.
     $name = 'theme_evolved/bodybackground';
     $title = get_string('bodybackground', 'theme_evolved');
@@ -830,6 +821,65 @@ $ADMIN->add('theme_evolved', $temp);
     $description = get_string('naviconbuttonurldesc', 'theme_evolved');
     $default = '';
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+$ADMIN->add('theme_evolved', $temp);
+
+
+/*Socialwall Settings temp*/
+$temp = new admin_settingpage('theme_evolved_socialwall', get_string('socialwallheading', 'theme_evolved'));
+    // Socialwall add a post bkg color.
+    $name = 'theme_evolved/swaddpost';
+    $title = get_string('swaddpost', 'theme_evolved');
+    $description = get_string('swaddpost_desc', 'theme_evolved');
+    $default = '#FFFFFF';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall post color.
+    $name = 'theme_evolved/swpost';
+    $title = get_string('swpost', 'theme_evolved');
+    $description = get_string('swpost_desc', 'theme_evolved');
+    $default = '#FFFFFF';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall Message color.
+    $name = 'theme_evolved/swmessage';
+    $title = get_string('swmessage', 'theme_evolved');
+    $description = get_string('swmessage_desc', 'theme_evolved');
+    $default = '#F0F3F7';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall Attachment color.
+    $name = 'theme_evolved/swattach';
+    $title = get_string('swattach', 'theme_evolved');
+    $description = get_string('swattach_desc', 'theme_evolved');
+    $default = '#F6FAA0';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall Attachment color.
+    $name = 'theme_evolved/swcomment';
+    $title = get_string('swcomment', 'theme_evolved');
+    $description = get_string('swcomment_desc', 'theme_evolved');
+    $default = '#FFFFFF';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall Icon and text color.
+    $name = 'theme_evolved/swicontext';
+    $title = get_string('swicontext', 'theme_evolved');
+    $description = get_string('swicontext_desc', 'theme_evolved');
+    $default = '#A83116';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 

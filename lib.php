@@ -261,6 +261,46 @@ function theme_evolved_process_css($css, $theme) {
     }
     $css = theme_evolved_set_swicontext($css, $swicontext);
 
+    // Set Socialwall post background color CSS.
+    if (!empty($theme->settings->swpost)) {
+        $swpost = $theme->settings->swpost;
+    } else {
+        $swpost = '';
+    }
+    $css = theme_evolved_set_swpost($css, $swpost);
+
+    // Set Socialwall add post color CSS.
+    if (!empty($theme->settings->swaddpost)) {
+        $swaddpost = $theme->settings->swaddpost;
+    } else {
+        $swaddpost = '';
+    }
+    $css = theme_evolved_set_swaddpost($css, $swaddpost);
+
+    // Set Socialwall message color CSS.
+    if (!empty($theme->settings->swmessage)) {
+        $swmessage = $theme->settings->swmessage;
+    } else {
+        $swmessage = '';
+    }
+    $css = theme_evolved_set_swmessage($css, $swmessage);
+
+    // Set Socialwall attachment color CSS.
+    if (!empty($theme->settings->swattach)) {
+        $swattach = $theme->settings->swattach;
+    } else {
+        $swattach = '';
+    }
+    $css = theme_evolved_set_swattach($css, $swattach);
+
+    // Set Socialwall attachment color CSS.
+    if (!empty($theme->settings->swcomment)) {
+        $swcomment = $theme->settings->swcomment;
+    } else {
+        $swcomment = '';
+    }
+    $css = theme_evolved_set_swcomment($css, $swcomment);
+
     return $css;
 }
 
@@ -283,6 +323,111 @@ function theme_evolved_set_customcss($css, $customcss) {
 
     return $css;
 }
+
+//Adds custom background color to marketboxes
+function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
+    $tag = '[[setting:marketboxcolor]]';
+    $replacement = $marketboxcolor;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom background color to topics and weeks
+function theme_evolved_set_topicweekcolor($css, $topicweekcolor) {
+    $tag = '[[setting:topicweekcolor]]';
+    $replacement = $topicweekcolor;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Icon and text color
+function theme_evolved_set_swicontext($css, $swicontext) {
+    $tag = '[[setting:swicontext]]';
+    $replacement = $swicontext;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Icon and text color
+function theme_evolved_set_swpost($css, $swpost) {
+    $tag = '[[setting:swpost]]';
+    $replacement = $swpost;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Icon and text color
+function theme_evolved_set_swaddpost($css, $swaddpost) {
+    $tag = '[[setting:swaddpost]]';
+    $replacement = $swaddpost;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Icon and text color
+function theme_evolved_set_swmessage($css, $swmessage) {
+    $tag = '[[setting:swmessage]]';
+    $replacement = $swmessage;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall attachment color
+function theme_evolved_set_swattach($css, $swattach) {
+    $tag = '[[setting:swattach]]';
+    $replacement = $swattach;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall attachment color
+function theme_evolved_set_swcomment($css, $swcomment) {
+    $tag = '[[setting:swcomment]]';
+    $replacement = $swcomment;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
 /**
  * Adds the logo to CSS.
  *
@@ -377,45 +522,6 @@ function theme_evolved_pluginfile($course, $cm, $context, $filearea, $args, $for
     } else {
         send_file_not_found();
     }
-}
-
-//Adds custom background color to marketboxes
-function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
-    $tag = '[[setting:marketboxcolor]]';
-    $replacement = $marketboxcolor;
-        if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
-
-//Adds custom background color to topics and weeks
-function theme_evolved_set_topicweekcolor($css, $topicweekcolor) {
-    $tag = '[[setting:topicweekcolor]]';
-    $replacement = $topicweekcolor;
-        if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
-
-//Adds custom Socialwall Icon and text color
-function theme_evolved_set_swicontext($css, $swicontext) {
-    $tag = '[[setting:swicontext]]';
-    $replacement = $swicontext;
-        if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
 }
 
 /**
