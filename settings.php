@@ -143,6 +143,7 @@ defined('MOODLE_INTERNAL') || die;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
+
 	 // Main content background color.
     $name = 'theme_evolved/contentbackground';
     $title = get_string('contentbackground', 'theme_evolved');
@@ -160,6 +161,25 @@ defined('MOODLE_INTERNAL') || die;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
+
+    // Topic and Week Background setting.
+    $name = 'theme_evolved/topicweekcolor';
+    $title = get_string('topicweekcolor', 'theme_evolved');
+    $description = get_string('topicweekcolor_desc', 'theme_evolved');
+    $default = '#FFFFFF';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
+    // Socialwall Icon and text color.
+    $name = 'theme_evolved/swicontext';
+    $title = get_string('swicontext', 'theme_evolved');
+    $description = get_string('swicontext_desc', 'theme_evolved');
+    $default = '#A83116';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, null, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
     // @bodyBackground setting.
     $name = 'theme_evolved/bodybackground';
     $title = get_string('bodybackground', 'theme_evolved');

@@ -110,19 +110,6 @@ function theme_evolved_process_css($css, $theme) {
     $fpbkg = $theme->setting_file_url('fpbkg', 'fpbkg');
     $css = theme_evolved_set_fpbkg($css, $fpbkg);
 
-    /* Set the fullscreen background image for the frontpage slideshow.
-    $back1 = $theme->setting_file_url('back1', 'back1');
-    $css = theme_evolved_set_back1($css, $back1);
-    // Set the fullscreen background image for the frontpage slideshow.
-    $back2 = $theme->setting_file_url('back2', 'back2');
-    $css = theme_evolved_set_back2($css, $back2);
-    // Set the fullscreen background image for the frontpage slideshow.
-    $back3 = $theme->setting_file_url('back3', 'back3');
-    $css = theme_evolved_set_back3($css, $back3);
-    // Set the fullscreen background image for the frontpage slideshow.
-    $back4 = $theme->setting_file_url('back4', 'back4');
-    $css = theme_evolved_set_back4($css, $back4);
-    */
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -258,6 +245,22 @@ function theme_evolved_process_css($css, $theme) {
     }
     $css = theme_evolved_set_marketboxcolor($css, $marketboxcolor);
 
+    // Set topic week background CSS.
+    if (!empty($theme->settings->topicweekcolor)) {
+        $topicweekcolor = $theme->settings->topicweekcolor;
+    } else {
+        $topicweekcolor = '';
+    }
+    $css = theme_evolved_set_topicweekcolor($css, $topicweekcolor);
+
+    // Set Socialwall icon and text color CSS.
+    if (!empty($theme->settings->swicontext)) {
+        $swicontext = $theme->settings->swicontext;
+    } else {
+        $swicontext = '';
+    }
+    $css = theme_evolved_set_swicontext($css, $swicontext);
+
     return $css;
 }
 
@@ -354,61 +357,7 @@ function theme_evolved_set_fpbkg($css, $fpbkg) {
     return $css;
 }
 
-/**
- * Adds the frontpage background to CSS slideshow.
- */
-/*function theme_evolved_set_back1($css, $back1) {
-    $tag = '[[setting:back1]]';
-    $replacement = $back1;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
 
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
-/**
- * Adds the frontpage background to CSS slideshow.
- */
-/*function theme_evolved_set_back2($css, $back2) {
-    $tag = '[[setting:back2]]';
-    $replacement = $back2;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
-/**
- * Adds the frontpage background to CSS slideshow.
- */
-/*function theme_evolved_set_back3($css, $back3) {
-    $tag = '[[setting:back3]]';
-    $replacement = $back3;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}/**
- * Adds the frontpage background to CSS slideshow.
- */
-/*function theme_evolved_set_back4($css, $back4) {
-    $tag = '[[setting:back4]]';
-    $replacement = $back4;
-    if (is_null($replacement)) {
-        $replacement = '';
-    }
-
-    $css = str_replace($tag, $replacement, $css);
-
-    return $css;
-}
 /**
  * Serves any files associated with the theme settings.
  *
@@ -434,6 +383,32 @@ function theme_evolved_pluginfile($course, $cm, $context, $filearea, $args, $for
 function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
     $tag = '[[setting:marketboxcolor]]';
     $replacement = $marketboxcolor;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom background color to topics and weeks
+function theme_evolved_set_topicweekcolor($css, $topicweekcolor) {
+    $tag = '[[setting:topicweekcolor]]';
+    $replacement = $topicweekcolor;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Icon and text color
+function theme_evolved_set_swicontext($css, $swicontext) {
+    $tag = '[[setting:swicontext]]';
+    $replacement = $swicontext;
         if (is_null($replacement)) {
         $replacement = '';
     }

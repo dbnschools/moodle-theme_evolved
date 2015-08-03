@@ -94,6 +94,12 @@ $string['marketboxcolor'] = 'Marketing Box background colour';
 $string['marketboxcolor_desc'] = 'The colour of the background for the marketing box.';
 $string['fptext'] = 'Frontpage Textbox';
 $string['fptextdesc'] = 'Whatever you add to this textarea will be displayed on the custom homepage below the main navigation icons.';
+$string['topicweekcolor'] = 'Topic and Week Section Background';
+$string['topicweekcolor_desc'] = 'In Topic and Weekly course formats this is the background color for each topic or week in the course.';
+$string['swicontext'] = 'Socialwall Course Format Icon and Text colors';
+$string['swicontext_desc'] = 'If you use the Socialwall Course Format this setting will change the colors of the icons and words Attachments, Posts, Message, and Comments in the wall feed.';
+
+
 //frontpage slideshow images
 $string['back1'] = 'Slideshow 1 of 4';
 $string['back2'] = 'Slideshow 2 of 4';
