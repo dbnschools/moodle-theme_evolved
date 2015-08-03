@@ -1,7 +1,7 @@
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
-    <nav role="navigation" class="navbar-inner">
+   <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
             <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
                 format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));

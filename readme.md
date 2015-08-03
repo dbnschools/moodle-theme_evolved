@@ -17,12 +17,11 @@ evolve-D Notes
 Special care has been taken to make this theme for the teachers of Dearborn Public Schools.  We support and love Moodle.
 
 evolved-D 2.0.4 Release Notes:
-
-- Video Demonstration https://youtu.be/XSgFnYXgz_E
+Video Demonstration https://youtu.be/XSgFnYXgz_E
 - Added Language strings to custom login page.
 - Added a fix for some special Socialwall Course Format styling in which we used CSS :before selectors to inject text such as Attachments, Comments, Message, and Post.  This led to problems with other languages.  We added the top 4 languages and instructions on how to change this if you use Evolve-D with Socialwall Course format.  This is not an issue unless you have the Socialwall Course Format installed.
-- Added new CSS styling to course sections and weeks so that each section is clearly seperated providing visual cues to the learner of section/weekly breaks. 
-- Added new theme admin page Socialwall Course Format Options.  Will allow Moodle Admin to pick colors for the socialwall course format timeline.  Must be using the Socialwall Course Format  https://moodle.org/plugins/browse.php?list=set&id=74
+-Added new CSS styling to course sections and weeks so that each section is clearly seperated providing visual cues to the learner of section/weekly breaks. 
+-Added new theme admin page Socialwall Course Format Options.  Will allow Moodle Admin to pick colors for the socialwall course format timeline.  Must be using the Socialwall Course Format  https://moodle.org/plugins/browse.php?list=set&id=74
 
 evolved-D 2.0.3 Release Notes:
 - Many css issues were fixed. Mainly the editbuttons, forum search field, and Annotate PDF lightbox.
