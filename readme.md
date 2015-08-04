@@ -15,6 +15,8 @@ https://docs.google.com/document/d/1InnFyMfajEKF-MSfvSHFLYHFTLaiYxZ0nulVzJZ9OGk/
 evolve-D Notes
 ======================
 Special care has been taken to make this theme for the teachers of Dearborn Public Schools.  We support and love Moodle.
+evolved-D 2.0.5 Release Notes:
+- Another Language fix.  Sorry for so many updates.  This is the final unless an issue is found.
 
 evolved-D 2.0.5 Release Notes:
 - Fixed background color issue for current topic/week not changing color.
