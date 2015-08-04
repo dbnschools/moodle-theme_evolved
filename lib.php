@@ -332,6 +332,14 @@ function theme_evolved_process_css($css, $theme) {
         $swlabelattachment = '';
     }
     $css = theme_evolved_set_swlabelattachment($css, $swlabelattachment);
+    
+    // Set custom CSS.
+    if (!empty($theme->settings->swmultilangcss)) {
+        $swmultilangcss = $theme->settings->swmultilangcss;
+    } else {
+        $swmultilangcss = null;
+    }
+    $css = theme_evolved_set_swmultilangcss($css, $swmultilangcss);
 
 
     return $css;
@@ -506,6 +514,18 @@ function theme_evolved_set_swcomment($css, $swcomment) {
     $replacement = $swcomment;
         if (is_null($replacement)) {
         $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+function theme_evolved_set_swmultilangcss($css, $swmultilangcss) {
+    $tag = '[[setting:swmultilangcss]]';
+    $replacement = $swmultilangcss;
+    if (is_null($replacement)) {
+        $replacement = null;
     }
 
     $css = str_replace($tag, $replacement, $css);

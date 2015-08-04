@@ -239,3 +239,5 @@ $string['swlabelpost_desc'] = 'Above each post this is the label that appears in
 $string['swlabelmessage_desc'] = 'Above the content of a post this message label appears in the timeline.';
 $string['swlabelcomment_desc'] = 'This label identifies the comment section for each post in the timeline.';
 $string['swlabelattachment_desc'] = 'When there are attachments with a post this label will identify the attachments.';
+$string['swmultilangcss'] = 'Translate Socialwall Labels';
+$string['swmultilangcss_desc'] = 'If you operate a multi language site, you can use the example provided to localize the Socialwall labels to the languages you support.';

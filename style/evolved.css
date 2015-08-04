@@ -777,6 +777,8 @@ margin:0px;
 .lang-it.format-socialwall .tl-post:before{ content: "\f086  Posta" }
 */
 
+[[setting:swmultilangcss]]
+
 .format-socialwall ul.section.tl-postattachment:before { content: "[[setting:swlabelattachment]]"; }
 .format-socialwall .tl-comments:before { content: "[[setting:swlabelcomment]]"; }
 .format-socialwall .tl-posttext:before{ content: "[[setting:swlabelmessage]]"; }

@@ -917,4 +917,36 @@ $temp->add(new admin_setting_heading('theme_evolved_socialwallheading', get_stri
     $setting->set_updatedcallback('theme_reset_all_caches');
     $temp->add($setting);
 
+    // Multilanguage CSS.
+    $name = 'theme_evolved/swmultilangcss';
+    $title = get_string('swmultilangcss', 'theme_evolved');
+    $description = get_string('swmultilangcss_desc', 'theme_evolved');
+    $default = '.lang-es.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Anexos"; }
+.lang-es.format-socialwall .tl-comments:before { content: "\f0e6  Comentarios"; }
+.lang-es.format-socialwall .tl-posttext:before{ content: "\f0e5  Mensaje"; }
+.lang-es.format-socialwall .tl-post:before{ content: "\f086  Publicación" }
+
+.lang-de.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Zubehör"; }
+.lang-de.format-socialwall .tl-comments:before { content: "\f0e6  Comments"; }
+.lang-de.format-socialwall .tl-posttext:before{ content: "\f0e5  Nachricht"; }
+.lang-de.format-socialwall .tl-post:before{ content: "\f086  Post" }
+
+.lang-es_mx.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Anexos"; }
+.lang-es_mx.format-socialwall .tl-comments:before { content: "\f0e6  Comentarios"; }
+.lang-es_mx.format-socialwall .tl-posttext:before{ content: "\f0e5  Mensaje"; }
+.lang-es_mx.format-socialwall .tl-post:before{ content: "\f086  Publicación" }
+
+.lang-fr.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Pièces jointes"; }
+.lang-fr.format-socialwall .tl-comments:before { content: "\f0e6  Commentaires"; }
+.lang-fr.format-socialwall .tl-posttext:before{ content: "\f0e5  Message"; }
+.lang-fr.format-socialwall .tl-post:before{ content: "\f086  Poste" }
+
+.lang-it.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Allegati"; }
+.lang-it.format-socialwall .tl-comments:before { content: "\f0e6  Commenti"; }
+.lang-it.format-socialwall .tl-posttext:before{ content: "\f0e5  Messaggio"; }
+.lang-it.format-socialwall .tl-post:before{ content: "\f086  Posta" }';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $temp->add($setting);
+
 $ADMIN->add('theme_evolved', $temp);
