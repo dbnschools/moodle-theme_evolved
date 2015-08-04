@@ -742,7 +742,7 @@ margin:0px;
 }
 
 /* Socialwall Language Strings based on popular languages.  These are only visible when you use the Socialwall Course format plugin. */
-.lang-en.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Attachments"; }
+/*.lang-en.format-socialwall ul.section.tl-postattachment:before { content: "\f0c6  Attachments"; }
 .lang-en.format-socialwall .tl-comments:before { content: "\f0e6  Comments"; }
 .lang-en.format-socialwall .tl-posttext:before{ content: "\f0e5  Message"; }
 .lang-en.format-socialwall .tl-post:before{ content: "\f086  Post" }
@@ -775,6 +775,12 @@ margin:0px;
 .lang-it.format-socialwall .tl-comments:before { content: "\f0e6  Commenti"; }
 .lang-it.format-socialwall .tl-posttext:before{ content: "\f0e5  Messaggio"; }
 .lang-it.format-socialwall .tl-post:before{ content: "\f086  Posta" }
+*/
+
+.format-socialwall ul.section.tl-postattachment:before { content: "[[setting:swlabelattachment]]"; }
+.format-socialwall .tl-comments:before { content: "[[setting:swlabelcomment]]"; }
+.format-socialwall .tl-posttext:before{ content: "[[setting:swlabelmessage]]"; }
+.format-socialwall .tl-post:before{ content: "[[setting:swlabelpost]]"; }
 
 .format-socialwall ul.section.tl-postattachment:before {
   color:[[setting:swicontext]];

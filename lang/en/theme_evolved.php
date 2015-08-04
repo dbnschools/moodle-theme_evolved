@@ -229,3 +229,13 @@ $string['lginuser'] = 'username';
 $string['lginpass'] = 'password';
 $string['lginforgot'] = 'forgot ?';
 $string['lginlogin'] = 'Log In';
+
+//socialwall CSS labels
+$string['swlabelpost'] = 'Post CSS Label';
+$string['swlabelmessage'] = 'Message CSS Label';
+$string['swlabelcomment'] = 'Comment CSS Label';
+$string['swlabelattachment'] = 'Attachment CSS Label';
+$string['swlabelpost_desc'] = 'Above each post this is the label that appears in the timeline.';
+$string['swlabelmessage_desc'] = 'Above the content of a post this message label appears in the timeline.';
+$string['swlabelcomment_desc'] = 'This label identifies the comment section for each post in the timeline.';
+$string['swlabelattachment_desc'] = 'When there are attachments with a post this label will identify the attachments.';

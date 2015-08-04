@@ -301,6 +301,39 @@ function theme_evolved_process_css($css, $theme) {
     }
     $css = theme_evolved_set_swcomment($css, $swcomment);
 
+    // Socialwall Labels.
+    if (!empty($theme->settings->swlabelpost)) {
+        $swlabelpost = $theme->settings->swlabelpost;
+    } else {
+        $swlabelpost = '';
+    }
+    $css = theme_evolved_set_swlabelpost($css, $swlabelpost);
+    
+    // Socialwall Labels.
+    if (!empty($theme->settings->swlabelmessage)) {
+        $swlabelmessage = $theme->settings->swlabelmessage;
+    } else {
+        $swlabelmessage = '';
+    }
+    $css = theme_evolved_set_swlabelmessage($css, $swlabelmessage);
+
+    // Socialwall Labels.
+    if (!empty($theme->settings->swlabelcomment)) {
+        $swlabelcomment = $theme->settings->swlabelcomment;
+    } else {
+        $swlabelcomment = '';
+    }
+    $css = theme_evolved_set_swlabelcomment($css, $swlabelcomment);
+
+    // Socialwall Labels.
+    if (!empty($theme->settings->swlabelattachment)) {
+        $swlabelattachment = $theme->settings->swlabelattachment;
+    } else {
+        $swlabelattachment = '';
+    }
+    $css = theme_evolved_set_swlabelattachment($css, $swlabelattachment);
+
+
     return $css;
 }
 
@@ -341,6 +374,58 @@ function theme_evolved_set_marketboxcolor($css, $marketboxcolor) {
 function theme_evolved_set_topicweekcolor($css, $topicweekcolor) {
     $tag = '[[setting:topicweekcolor]]';
     $replacement = $topicweekcolor;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Labels
+function theme_evolved_set_swlabelpost($css, $swlabelpost) {
+    $tag = '[[setting:swlabelpost]]';
+    $replacement = $swlabelpost;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Labels
+function theme_evolved_set_swlabelmessage($css, $swlabelmessage) {
+    $tag = '[[setting:swlabelmessage]]';
+    $replacement = $swlabelmessage;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Labels
+function theme_evolved_set_swlabelcomment($css, $swlabelcomment) {
+    $tag = '[[setting:swlabelcomment]]';
+    $replacement = $swlabelcomment;
+        if (is_null($replacement)) {
+        $replacement = '';
+    }
+
+    $css = str_replace($tag, $replacement, $css);
+
+    return $css;
+}
+
+//Adds custom Socialwall Labels
+function theme_evolved_set_swlabelattachment($css, $swlabelattachment) {
+    $tag = '[[setting:swlabelattachment]]';
+    $replacement = $swlabelattachment;
         if (is_null($replacement)) {
         $replacement = '';
     }

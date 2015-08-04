@@ -35,7 +35,7 @@ $settings = null;
 defined('MOODLE_INTERNAL') || die;
 
 
-	$ADMIN->add('themes', new admin_category('theme_evolved', 'Evolve-D'));
+	$ADMIN->add('themes', new admin_category('theme_evolved', 'evolve-D'));
 
     // "geneictemp" settingpage
     $temp = new admin_settingpage('theme_evolved_generic',  get_string('geneicsettings', 'theme_evolved'));
@@ -829,6 +829,39 @@ $ADMIN->add('theme_evolved', $temp);
 /*Socialwall Settings temp*/
 $temp = new admin_settingpage('theme_evolved_socialwall', get_string('socialwallheading', 'theme_evolved'));
 $temp->add(new admin_setting_heading('theme_evolved_socialwallheading', get_string('socialwallheaddesc', 'theme_evolved')));
+
+    // Label Post
+    $name = 'theme_evolved/swlabelpost';
+    $title = get_string('swlabelpost','theme_evolved');
+    $description = get_string('swlabelpost_desc', 'theme_evolved');
+    $default = '\f086  Post';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
+
+    // Label Message
+    $name = 'theme_evolved/swlabelmessage';
+    $title = get_string('swlabelmessage','theme_evolved');
+    $description = get_string('swlabelmessage_desc', 'theme_evolved');
+    $default = '\f0e5  Message';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
+
+    // Label comment
+    $name = 'theme_evolved/swlabelcomment';
+    $title = get_string('swlabelcomment','theme_evolved');
+    $description = get_string('swlabelcomment_desc', 'theme_evolved');
+    $default = '\f0e6  Comments';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
+
+    // Label Attachment
+    $name = 'theme_evolved/swlabelattachment';
+    $title = get_string('swlabelattachment','theme_evolved');
+    $description = get_string('swlabelattachment_desc', 'theme_evolved');
+    $default = '\f0c6  Attachments';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $temp->add($setting);
+
 
     // Socialwall add a post bkg color.
     $name = 'theme_evolved/swaddpost';

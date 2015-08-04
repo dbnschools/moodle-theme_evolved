@@ -16,6 +16,11 @@ evolve-D Notes
 ======================
 Special care has been taken to make this theme for the teachers of Dearborn Public Schools.  We support and love Moodle.
 
+evolved-D 2.0.5 Release Notes:
+- Fixed background color issue for current topic/week not changing color.
+- Added ability to customize Socialwall timeline labels.  These labels identify different areas of the post structure such as the Post, the Message contained in the post, Comments, and Attachments.  With custom labels you can change the text and icon to localize it.
+
+
 evolved-D 2.0.4 Release Notes:
 - Video Demonstration https://youtu.be/XSgFnYXgz_E
 - Added Language strings to custom login page.
