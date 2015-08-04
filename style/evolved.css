@@ -779,7 +779,6 @@ margin:0px;
 .format-socialwall ul.section.tl-postattachment:before {
   color:[[setting:swicontext]];
   line-height: 20px;
-  horizontal-aling: ;
   display: inline-block;
   font: 16px/1 FontAwesome;
   text-rendering: auto;
@@ -794,7 +793,6 @@ margin:0px;
 .format-socialwall .tl-comments:before {
   color:[[setting:swicontext]];
   line-height: 20px;
-  horizontal-aling: ;
   display: inline-block;
   font: 16px/1 FontAwesome;
   text-rendering: auto;
@@ -809,7 +807,6 @@ margin:0px;
 .format-socialwall .tl-posttext:before{
   color:[[setting:swicontext]];
   line-height: 20px;
-  horizontal-aling: ;
   display: inline-block;
   font: 16px/1 FontAwesome;
   text-rendering: auto;
@@ -825,7 +822,6 @@ margin:0px;
 .format-socialwall .tl-post:before{
   color:[[setting:swicontext]];
   line-height: 20px;
-  horizontal-aling: ;
   display: inline-block;
   font: 18px/1 FontAwesome;
   text-rendering: auto;
@@ -1044,6 +1040,10 @@ On click the images will be displayed at normal size to complete the effect
   margin-bottom: 60px;
   border-bottom: 0px;
   background-color:[[setting:topicweekcolor]];
+}
+
+.course-content .current {
+  background-color: #d9edf7 !important;
 }
 
 h3.sectionname {border-bottom: 2px solid #000;}
