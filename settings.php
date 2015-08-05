@@ -828,7 +828,7 @@ $ADMIN->add('theme_evolved', $temp);
 
 /*Socialwall Settings temp*/
 $temp = new admin_settingpage('theme_evolved_socialwall', get_string('socialwallheading', 'theme_evolved'));
-$description = get_string('socialwallheaddesc', 'theme_evolved');
+
     // Label Post
     $name = 'theme_evolved/swlabelpost';
     $title = get_string('swlabelpost','theme_evolved');
